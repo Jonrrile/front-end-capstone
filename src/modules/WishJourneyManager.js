@@ -6,5 +6,10 @@ export default {
     },
     getAll() {
         return fetch(`${remoteURL}/wishjourneys`).then(result => result.json())
+    },
+    delete(id) {
+        return fetch(`${remoteURL}/wishjourneys/${id}`, {
+            method: "DELETE"
+        }).then(result => result.json())
     }
 }

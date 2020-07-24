@@ -1,19 +1,22 @@
 {
-    "wishjourneys": [
-        {"id": 1, 
-         "destination": "Japan",
-         "description": "To see the cherry blossoms",
-         "budget": "$2200"
-         },
-        {"id": 3, 
-         "destination": "Key West",
-         "description": "To see the cherry blossoms",
-         "budget": "$2200"
-         },
-        {"id": 2, 
-         "destination": "Michigan",
-         "description": "To see the cherry blossoms",
-         "budget": "$2200"
-         }
-    ]
+  "wishjourneys": [
+    {
+      "id": 1,
+      "destination": "Japan",
+      "description": "To see the cherry blossoms",
+      "budget": "$2200"
+    },
+    {
+      "id": 2,
+      "destination": "Japan",
+      "description": "To see the cherry blossoms",
+      "budget": "$2200"
+    },
+    {
+      "id": 3,
+      "destination": "Japan",
+      "description": "To see the cherry blossoms",
+      "budget": "$2200"
+    }
+  ]
 }

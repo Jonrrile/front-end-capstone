@@ -2,7 +2,7 @@ import { Route } from "react-router-dom";
 import React from "react";
 import Home from './Home'
 import WishJourneyList from './WishDestinations/WishJourneyList'
-import WishJourneyCard from "./WishDestinations/WishJourneyCard";
+import WishJourneyDetail from './WishDestinations/WishJourneyDetail'
 
 
 const ApplicationViews = (props) => {
@@ -24,6 +24,9 @@ const ApplicationViews = (props) => {
       />
       <Route exact path="/wishlist" render={(props) => {
       return <WishJourneyList />
+      }} />
+      <Route path="/wishlist/:wishjourneyId(\d+)" render={(props) => {
+      return <WishJourneyDetail wishjourneyId={parseInt(props.match.params.wishjourneyId)}/>
       }} />
       
     </React.Fragment>
