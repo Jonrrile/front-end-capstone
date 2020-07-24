@@ -1,21 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom"
+import { Card } from 'react-bootstrap'
+import { CardDeck } from 'react-bootstrap'
 
 
 const WishJourneyCard = props => {
     return (
-        <div className="card">
-            <div className="card-content">
-                <h3>Destination: {props.wishjourney.destination}</h3>
-                <h3>Description: {props.wishjourney.description}</h3>
-                <h3>Budget: {props.wishjourney.budget}</h3>
+        <CardDeck>
+        <Card style={{ width: '18rem'}}>
+        <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Body>
+                <Card.Title>Destination: {props.wishjourney.destination}</Card.Title>
+                <Card.Text>{props.wishjourney.description}</Card.Text>
                 <Link to={`/wishlist/${props.wishjourney.id}`}>
                     <button>Details</button>
                 </Link>
                 <button type="button" onClick={() => props.deleteJourney(props.wishjourney.id)}>Delete</button>
-                
-            </div>
-        </div>
+                </Card.Body>
+                </Card>
+                </CardDeck>
     )
 }
 

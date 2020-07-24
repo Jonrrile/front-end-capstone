@@ -1,22 +1,22 @@
 {
   "wishjourneys": [
     {
-      "id": 1,
-      "destination": "Japan",
-      "description": "To see the cherry blossoms",
-      "budget": "$2200"
-    },
-    {
-      "id": 2,
-      "destination": "Japan",
-      "description": "To see the cherry blossoms",
-      "budget": "$2200"
-    },
-    {
       "id": 3,
       "destination": "Japan",
       "description": "To see the cherry blossoms",
       "budget": "$2200"
+    },
+    {
+      "destination": "Michigan ",
+      "description": "Ann Arbor Go Blue!!",
+      "budget": "$1100",
+      "id": 4
+    },
+    {
+      "destination": "Key West",
+      "description": "To see Ernest Hemingway's Library",
+      "budget": "$800",
+      "id": 5
     }
   ]
 }
