@@ -29,9 +29,9 @@ const CompletedJourneyList = (props) => {
                     Add to Plans!
   </button>
             </section>
-            <div className="container-cards">
+            <div className="container">
                 {completedjourneys.map(completedjourney =>
-                    <CompletedJourneyCard key={completedjourney.id} completedjourney={completedjourney}
+                    <CompletedJourneyCard className="cards" key={completedjourney.id} completedjourney={completedjourney}
                         deleteJourney={deleteJourney}
                         {...props} />)}
             </div>

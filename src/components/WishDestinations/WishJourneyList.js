@@ -29,9 +29,9 @@ const WishJourneyList = (props) => {
                     Add to Wishlist!
   </button>
             </section>
-            <div className="container-cards">
+            <div className="container">
                 {wishjourneys.map(wishjourney =>
-                    <WishJourneyCard key={wishjourney.id} wishjourney={wishjourney}
+                    <WishJourneyCard className="cards" key={wishjourney.id} wishjourney={wishjourney}
                         deleteJourney={deleteJourney}
                         {...props} />)}
             </div>

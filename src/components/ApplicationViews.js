@@ -7,6 +7,9 @@ import WishJourneyForm from './WishDestinations/WishJourneyForm'
 import CompletedJourneyList from './CompletedJourneys/CompletedJourneyList'
 import CompletedJourneyForm from './CompletedJourneys/CompletedJourneyForm'
 import CompletedJourneyDetail from './CompletedJourneys/CompletedJourneyDetail'
+import PlannedJourneyList from './PlannedJourneys/PlannedJourneyList'
+import PlannedJourneyDetail from './PlannedJourneys/PlannedJourneyDetail'
+import PlannedJourneyForm from './PlannedJourneys/PlannedJourneyForm'
 
 const ApplicationViews = (props) => {
   return (
@@ -39,8 +42,8 @@ const ApplicationViews = (props) => {
        <Route
         exact
         path="/completedjourneys"
-        render={props => {
-          return <CompletedJourneyList />;
+        render={(props) => {
+          return <CompletedJourneyList {...props} />;
         }}
       /> 
       <Route path="/completedjourneys/:completedjourneyId(\d+)" render={(props) => {
@@ -50,6 +53,21 @@ const ApplicationViews = (props) => {
       }} />
       <Route path="/completedjourneys/new" render={(props) => {
         return <CompletedJourneyForm {...props} />
+      }} />
+       <Route
+        exact
+        path="/plannedjourneys"
+        render={(props) => {
+          return <PlannedJourneyList {...props} />;
+        }}
+      /> 
+      <Route path="/plannedjourneys/:plannedjourneyId(\d+)" render={(props) => {
+      return <PlannedJourneyDetail plannedjourneyId={parseInt(props.match.params.plannedjourneyId)}
+      {...props}
+      />
+      }} />
+      <Route path="/plannedjourneys/new" render={(props) => {
+        return <PlannedJourneyForm {...props} />
       }} />
       
     </React.Fragment>

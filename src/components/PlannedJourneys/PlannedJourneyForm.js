@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
-import CompletedJourneyManager from '../../modules/CompletedJourneyManager';
+import PlannedJourneyManager from '../../modules/PlannedJourneyManager';
 
-const CompletedJourneyForm = props => {
-    const [completedjourney, setCompletedJourney] = useState({ destination: "", description: "", budget: "", img: ""});
+const PlannedJourneyForm = props => {
+    const [plannedjourney, setPlannedJourney] = useState({ destination: "", description: "", budget: ""});
     const [isLoading, setIsLoading] = useState(false);
 
     const handleFieldChange = evt => {
-        const stateToChange = { ...completedjourney};
+        const stateToChange = { ...plannedjourney};
         stateToChange[evt.target.id] = evt.target.value;
-        setCompletedJourney(stateToChange);
+        setPlannedJourney(stateToChange);
     };
 
     const constructNewJourney = evt => {
         evt.preventDefault();
-        if (completedjourney.destination === "" || completedjourney.description === "" || completedjourney.budget === "") {
+        if (plannedjourney.destination === "" || plannedjourney.description === "" || plannedjourney.budget === "") {
             window.alert("Please fill out all fields!");
         } else {
             setIsLoading(true);
-            CompletedJourneyManager.post(completedjourney)
-            .then(() => props.history.push("/completedjourneys"))
+            PlannedJourneyManager.post(plannedjourney)
+            .then(() => props.history.push("/plannedjourneys"))
         }
 
     };
@@ -52,13 +52,6 @@ const CompletedJourneyForm = props => {
               id="budget"
               placeholder="Estimated Budget"
             />
-            <input
-              type="file"
-              required
-              onChange={handleFieldChange}
-              id="image"
-              placeholder="Select an Image"
-            />
             
           </div>
           <div className="alignRight">
@@ -74,4 +67,4 @@ const CompletedJourneyForm = props => {
     );
 };
 
-export default CompletedJourneyForm
+export default PlannedJourneyForm

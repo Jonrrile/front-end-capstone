@@ -3,7 +3,7 @@ import CompletedJourneyManager from '../../modules/CompletedJourneyManager';
 
 
 const CompletedJourneyDetail = props => {
-  const [completedjourney, setCompletedJourney] = useState({ destination: "", description: "" });
+  const [completedjourney, setCompletedJourney] = useState({ destination: "", description: "", budget: "", img: "" });
 
   useEffect(() => {
     //get(id) from CompletedJourneyManager and hang on to the data; put it into state
@@ -11,7 +11,9 @@ const CompletedJourneyDetail = props => {
       .then(completedjourney => {
         setCompletedJourney({
           destination: completedjourney.destination,
-          description: completedjourney.description
+          description: completedjourney.description,
+          budget: completedjourney.budget,
+          img: completedjourney.img
         });
       });
   }, [props.completedjourneyId]);
@@ -21,6 +23,7 @@ const CompletedJourneyDetail = props => {
       <div className="card-content">
         <h3>Destination: {completedjourney.destination}</h3>
         <p>Description:  {completedjourney.description}</p>
+        <p>Budget: {completedjourney.budget}</p>
       </div>
     </div>
   );
