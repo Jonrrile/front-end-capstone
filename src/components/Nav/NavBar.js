@@ -26,7 +26,7 @@ const NavBar = props => {
        <DropdownButton as={ButtonGroup} id="dropdown-basic-button" title="Dropdown">
       <Link className="nav-link" to="/wishlist">Wish List</Link>
       <Dropdown.Item href="#/action-2">Planned Journeys</Dropdown.Item>
-      <Dropdown.Item href="#/action-3">Completed Journeys</Dropdown.Item>
+      <Link className="nav-link" to="/completedjourneys">Completed Journeys</Link>
       </DropdownButton>
       </Nav.Item>
        <Nav.Item>

@@ -4,6 +4,9 @@ import Home from './Home'
 import WishJourneyList from './WishDestinations/WishJourneyList'
 import WishJourneyDetail from './WishDestinations/WishJourneyDetail'
 import WishJourneyForm from './WishDestinations/WishJourneyForm'
+import CompletedJourneyList from './CompletedJourneys/CompletedJourneyList'
+import CompletedJourneyForm from './CompletedJourneys/CompletedJourneyForm'
+import CompletedJourneyDetail from './CompletedJourneys/CompletedJourneyDetail'
 
 const ApplicationViews = (props) => {
   return (
@@ -32,6 +35,21 @@ const ApplicationViews = (props) => {
       }} />
       <Route path="/wishlist/new" render={(props) => {
         return <WishJourneyForm {...props} />
+      }} />
+       <Route
+        exact
+        path="/completedjourneys"
+        render={props => {
+          return <CompletedJourneyList />;
+        }}
+      /> 
+      <Route path="/completedjourneys/:completedjourneyId(\d+)" render={(props) => {
+      return <CompletedJourneyDetail completedjourneyId={parseInt(props.match.params.completedjourneyId)}
+      {...props}
+      />
+      }} />
+      <Route path="/completedjourneys/new" render={(props) => {
+        return <CompletedJourneyForm {...props} />
       }} />
       
     </React.Fragment>

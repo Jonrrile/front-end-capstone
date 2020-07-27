@@ -18,5 +18,19 @@
       "budget": "$800",
       "id": 5
     }
+  ],
+  "completedjourneys": [
+    {
+      "id": 3,
+      "destination": "Japan",
+      "description": "To see the cherry blossoms",
+      "budget": "$2200"
+    },
+    {
+      "destination": "Michigan ",
+      "description": "Ann Arbor Go Blue!!",
+      "budget": "$1100",
+      "id": 4
+    }
   ]
 }
