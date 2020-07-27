@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from 'react-router-dom';
 import { Link } from "react-router-dom"
 import { DropdownButton } from "react-bootstrap"
 import { Dropdown } from "react-bootstrap"
@@ -9,7 +10,10 @@ import "./NavBar.css"
 
 
 const NavBar = props => {
-
+  const handleLogout = () => {
+    props.clearUser();
+    props.history.push('/');
+  }
     return (
       <header>
         <h1 className="site-title">
@@ -22,6 +26,7 @@ const NavBar = props => {
          <Link className="nav-link" to="/home">Home</Link>
          </Button>
         </Nav.Item>
+       
         <Nav.Item>
        <DropdownButton as={ButtonGroup} id="dropdown-basic-button" title="Dropdown">
       <Link className="nav-link" to="/wishlist">Wish List</Link>
@@ -29,21 +34,26 @@ const NavBar = props => {
       <Link className="nav-link" to="/completedjourneys">Completed Journeys</Link>
       </DropdownButton>
       </Nav.Item>
+      
        <Nav.Item>
          <Button>
          <Link className="nav-link" to="/blog">Blog</Link>
         </Button>
         </Nav.Item>
+       
         <Nav.Item>
          <Button>
          <Link className="nav-link" to="/gallery">Gallery</Link>
          </Button>
          </Nav.Item>
+         
+        
         <Nav.Item>
          <Button>
          <Link className="nav-link" to="/logout">Logout</Link>
          </Button>
          </Nav.Item>
+         
        </ButtonGroup>
        </Nav>
  </header>

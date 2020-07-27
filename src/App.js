@@ -5,18 +5,23 @@ import ApplicationViews from './components/ApplicationViews'
 
 
 
-
 function App() {
+  // const clearUser = () => {
+  //   sessionStorage.clear();
+  //   setHasUser(isAuthenticated());
+  // }
+
   return (
     <div className="App">
       <NavBar />
-  <ApplicationViews />    
-   
-  
-  
+      {/* <NavBar hasUser={hasUser} clearUser={clearUser} /> */}
+      <ApplicationViews />
+
+
+
 
     </div>
-  
+
 
   );
 }
