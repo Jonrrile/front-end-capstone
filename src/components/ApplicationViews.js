@@ -25,6 +25,7 @@ const ApplicationViews = (props) => {
           return <Home />;
         }}
       />
+
       <Route
         exact
         path="/home"
@@ -32,6 +33,7 @@ const ApplicationViews = (props) => {
           return <Home />;
         }}
       />
+
       <Route exact path="/wishlist" render={(props) => {
         if (isAuthenticated()) {
       return <WishJourneyList {...props}/>

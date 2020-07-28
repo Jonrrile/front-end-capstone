@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer'
 
 
 
+
 function App() {
   // const clearUser = () => {
   //   sessionStorage.clear();
@@ -21,6 +22,11 @@ function App() {
         </div>
         <Footer />
     
+
+
+ 
+  
+  
     </div>
 
 
