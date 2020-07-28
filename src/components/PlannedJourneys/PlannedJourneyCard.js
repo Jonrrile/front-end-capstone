@@ -8,10 +8,10 @@ const PlannedJourneyCard = props => {
     return (
         <CardDeck>
         <Card style={{ width: '18rem'}}>
-        <Card.Img variant="top" src="holder.js/100px180" />
+        <Card.Img variant="top" src={props.completedjourney.img}/>
             <Card.Body>
-                <Card.Title>Destination: {props.plannedjourney.destination}</Card.Title>
-                <Card.Text>{props.plannedjourney.description}</Card.Text>
+                <Card.Title>{props.plannedjourney.destination}</Card.Title>
+                <Card.Text>{props.plannedjourney.dates}</Card.Text>
                 <Link to={`/completedjourneys/${props.plannedjourney.id}`}>
                     <button>Details</button>
                 </Link>

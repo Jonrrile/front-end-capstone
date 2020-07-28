@@ -10,8 +10,8 @@ const CompletedJourneyCard = props => {
         <Card style={{ width: '18rem'}}>
         <Card.Img variant="top" src={props.completedjourney.img}/>
             <Card.Body>
-                <Card.Title>Destination: {props.completedjourney.destination}</Card.Title>
-                <Card.Text>{props.completedjourney.description}</Card.Text>
+                <Card.Title>{props.completedjourney.destination}</Card.Title>
+                <Card.Text>{props.completedjourney.date}</Card.Text>
                 <Link to={`/completedjourneys/${props.completedjourney.id}`}>
                     <button>Details</button>
                 </Link>
