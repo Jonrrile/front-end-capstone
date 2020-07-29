@@ -1,43 +1,28 @@
 {
   "wishjourneys": [
     {
-      "destination": "Michigan ",
-      "description": "Ann Arbor Go Blue!!",
-      "budget": "$1100",
+      "destination": "Japan ",
+      "description": "To see the cherry blossom festival",
+      "budget": "$2100",
+      "img": "https://media.cntraveler.com/photos/5c3f46c2a5c1d51f43a9d220/16:9/w_2560%2Cc_limit/Japan_Cherry-Blossoms_GettyImages-179989245.jpg",
       "id": 4
     },
     {
-      "destination": "Key West",
-      "description": "To see Ernest Hemingway's Library",
-      "budget": "$800",
+      "destination": "Alaska",
+      "description": "To see The Northern Lights",
+      "budget": "$1800",
+      "img": "https://www.usnews.com/dims4/USNEWS/07160a4/2147483647/resize/1200x%3E/quality/85/?url=http%3A%2F%2Fcom-usnews-beam-media.s3.amazonaws.com%2F16%2F7e%2Fdb70a6cd4611b0f82e3bd4bf0cd8%2F1-intro-getty.jpg",
       "id": 5
-    },
-    {
-      "destination": "Michigan ",
-      "description": "To see Ernest Hemingway's Library",
-      "budget": "$1100",
-      "id": 6
     }
   ],
   "plannedjourneys": [
     {
-      "destination": "Michigan ",
-      "description": "Ann Arbor Go Blue!!",
-      "date": "11/30/2019",
-      "budget": "$1100",
-      "id": 4
-    },
-    {
       "destination": "Key West",
       "description": "To see Ernest Hemingway's Library",
       "budget": "$800",
+      "date": "November 16th, 2020",
+      "img": "https://www.floridamemory.com/fpc/commerce/K013159.jpg",
       "id": 5
-    },
-    {
-      "destination": "Key West",
-      "description": "To see Ernest Hemingway's Library",
-      "budget": "$800",
-      "id": 6
     }
   ],
   "completedjourneys": [
@@ -56,25 +41,11 @@
       "id": 2
     },
     {
-      "destination": "Ann Arbor, Michigan ",
-      "description": "My dad and I celebrated our birthdays in Ann Arbor at the Ohio State/Michigan game",
-      "date": "11/30/2019",
-      "img": "https://www.mlive.com/resizer/ltnPCMTkx87IpCKrfe7dDyPaBBs=/1280x0/smart/advancelocal-adapter-image-uploads.s3.amazonaws.com/image.mlive.com/home/mlive-media/width2048/img/wolverines_impact/photo/23282908-standard.jpg",
+      "destination": "Cozumel, Mexico ",
+      "description": "My family and I took a cruise to Cozumel. I got to swim with the dolphins",
+      "date": "Summer of 2016",
+      "img": "https://secureservercdn.net/198.71.233.179/ybx.6a8.myftpupload.com/wp-content/uploads/2019/08/cozumel-suba-LR.jpg",
       "id": 3
-    },
-    {
-      "destination": "Ann Arbor, Michigan ",
-      "description": "My dad and I celebrated our birthdays in Ann Arbor at the Ohio State/Michigan game",
-      "date": "11/30/2019",
-      "img": "https://www.mlive.com/resizer/ltnPCMTkx87IpCKrfe7dDyPaBBs=/1280x0/smart/advancelocal-adapter-image-uploads.s3.amazonaws.com/image.mlive.com/home/mlive-media/width2048/img/wolverines_impact/photo/23282908-standard.jpg",
-      "id": 4
-    },
-    {
-      "destination": "Ann Arbor, Michigan ",
-      "description": "My dad and I celebrated our birthdays in Ann Arbor at the Ohio State/Michigan game",
-      "date": "11/30/2019",
-      "img": "https://www.mlive.com/resizer/ltnPCMTkx87IpCKrfe7dDyPaBBs=/1280x0/smart/advancelocal-adapter-image-uploads.s3.amazonaws.com/image.mlive.com/home/mlive-media/width2048/img/wolverines_impact/photo/23282908-standard.jpg",
-      "id": 5
     }
   ]
 }

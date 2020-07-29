@@ -3,7 +3,7 @@ import WishJourneyManager from '../../modules/WishJourneyManager';
 
 
 const WishJourneyDetail = props => {
-  const [wishjourney, setWishJourney] = useState({ destination: "", description: "" });
+  const [wishjourney, setWishJourney] = useState({ destination: "", description: "", budget: "" });
 
   useEffect(() => {
     //get(id) from WishJourneyManager and hang on to the data; put it into state
@@ -11,7 +11,8 @@ const WishJourneyDetail = props => {
       .then(wishjourney => {
         setWishJourney({
           destination: wishjourney.destination,
-          description: wishjourney.description
+          description: wishjourney.description,
+          budget: wishjourney.budget
         });
       });
   }, [props.wishjourneyId]);
@@ -21,6 +22,7 @@ const WishJourneyDetail = props => {
       <div className="card-content">
         <h3>Destination: {wishjourney.destination}</h3>
         <p>Description:  {wishjourney.description}</p>
+        <p>Budget Needed: {wishjourney.budget}</p>
       </div>
     </div>
   );

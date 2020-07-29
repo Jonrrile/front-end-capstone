@@ -3,7 +3,7 @@ import PlannedJourneyManager from '../../modules/PlannedJourneyManager';
 
 
 const PlannedJourneyDetail = props => {
-  const [plannedjourney, setPlannedJourney] = useState({ destination: "", description: "" });
+  const [plannedjourney, setPlannedJourney] = useState({ destination: "", description: "",  budget: "", date: "" });
 
   useEffect(() => {
     //get(id) from PlannedJourneyManager and hang on to the data; put it into state
@@ -11,7 +11,9 @@ const PlannedJourneyDetail = props => {
       .then(plannedjourney => {
         setPlannedJourney({
           destination: plannedjourney.destination,
-          description: plannedjourney.description
+          description: plannedjourney.description,
+          budget: plannedjourney.budget,
+          date: plannedjourney.date
         });
       });
   }, [props.plannedjourneyId]);
@@ -21,6 +23,8 @@ const PlannedJourneyDetail = props => {
       <div className="card-content">
         <h3>Destination: {plannedjourney.destination}</h3>
         <p>Description:  {plannedjourney.description}</p>
+        <p>Budget: {plannedjourney.budget}</p>
+        <p>Dates: {plannedjourney.date}</p>
       </div>
     </div>
   );
