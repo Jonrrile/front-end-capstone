@@ -1,0 +1,48 @@
+small {
+    font-size: 75%;
+  }
+  
+  header {
+    background-color: darkblue;
+    border: cornflowerblue solid 3px;
+  }
+  
+  .site-title {
+    color: ghostwhite;
+    text-align: center;
+  }
+  
+  nav .container {
+    display: flex;
+    padding: 0;
+    margin-bottom: 0;
+    flex-direction: row;
+  }
+  
+  nav .container li {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    color: cornsilk;
+    box-sizing: border-box;
+    background-color: cornflowerblue;
+    list-style-type: none;
+    flex-direction: row;
+  }
+  
+  .nav-link {
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .nav-link:hover {
+    color: maroon;
+  }
+
+  .nav-item {
+      display: flex;
+      flex-direction: row;
+
+  }

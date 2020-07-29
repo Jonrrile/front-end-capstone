@@ -1,0 +1,80 @@
+{
+  "wishjourneys": [
+    {
+      "destination": "Michigan ",
+      "description": "Ann Arbor Go Blue!!",
+      "budget": "$1100",
+      "id": 4
+    },
+    {
+      "destination": "Key West",
+      "description": "To see Ernest Hemingway's Library",
+      "budget": "$800",
+      "id": 5
+    },
+    {
+      "destination": "Michigan ",
+      "description": "To see Ernest Hemingway's Library",
+      "budget": "$1100",
+      "id": 6
+    }
+  ],
+  "plannedjourneys": [
+    {
+      "destination": "Michigan ",
+      "description": "Ann Arbor Go Blue!!",
+      "date": "11/30/2019",
+      "budget": "$1100",
+      "id": 4
+    },
+    {
+      "destination": "Key West",
+      "description": "To see Ernest Hemingway's Library",
+      "budget": "$800",
+      "id": 5
+    },
+    {
+      "destination": "Key West",
+      "description": "To see Ernest Hemingway's Library",
+      "budget": "$800",
+      "id": 6
+    }
+  ],
+  "completedjourneys": [
+    {
+      "destination": "Ann Arbor, Michigan ",
+      "description": "My dad and I celebrated our birthdays in Ann Arbor at the Ohio State/Michigan game",
+      "date": "11/30/2019",
+      "img": "https://assets.simpleviewinc.com/simpleview/image/fetch/c_limit,q_75,w_1200/https://assets.simpleviewinc.com/simpleview/image/upload/crm/annarbor/stadium_tour_010-24320de65056a36_24320f72-5056-a36a-06dac95ae9a433f5.jpg",
+      "id": 1
+    },
+    {
+      "destination": "New York City, New York ",
+      "description": "My friends and I took an impromptu summer senior trip to NYC.",
+      "date": "Summer of 2012",
+      "img": "https://imageproxy.themaven.net//https%3A%2F%2Fwww.history.com%2F.image%2FMTY1MTc1MTk3ODI0MDAxNjA5%2Ftopic-statue-of-liberty-gettyimages-960610006-promo.jpg",
+      "id": 2
+    },
+    {
+      "destination": "Ann Arbor, Michigan ",
+      "description": "My dad and I celebrated our birthdays in Ann Arbor at the Ohio State/Michigan game",
+      "date": "11/30/2019",
+      "img": "https://www.mlive.com/resizer/ltnPCMTkx87IpCKrfe7dDyPaBBs=/1280x0/smart/advancelocal-adapter-image-uploads.s3.amazonaws.com/image.mlive.com/home/mlive-media/width2048/img/wolverines_impact/photo/23282908-standard.jpg",
+      "id": 3
+    },
+    {
+      "destination": "Ann Arbor, Michigan ",
+      "description": "My dad and I celebrated our birthdays in Ann Arbor at the Ohio State/Michigan game",
+      "date": "11/30/2019",
+      "img": "https://www.mlive.com/resizer/ltnPCMTkx87IpCKrfe7dDyPaBBs=/1280x0/smart/advancelocal-adapter-image-uploads.s3.amazonaws.com/image.mlive.com/home/mlive-media/width2048/img/wolverines_impact/photo/23282908-standard.jpg",
+      "id": 4
+    },
+    {
+      "destination": "Ann Arbor, Michigan ",
+      "description": "My dad and I celebrated our birthdays in Ann Arbor at the Ohio State/Michigan game",
+      "date": "11/30/2019",
+      "img": "https://www.mlive.com/resizer/ltnPCMTkx87IpCKrfe7dDyPaBBs=/1280x0/smart/advancelocal-adapter-image-uploads.s3.amazonaws.com/image.mlive.com/home/mlive-media/width2048/img/wolverines_impact/photo/23282908-standard.jpg",
+      "id": 5
+    }
+  ]
+}

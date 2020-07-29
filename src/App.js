@@ -1,25 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
+import NavBar from "./components/Nav/NavBar"
 import './App.css';
+import ApplicationViews from './components/ApplicationViews'
+import Footer from './components/Footer/Footer'
+
+
+
 
 function App() {
+  // const clearUser = () => {
+  //   sessionStorage.clear();
+  //   setHasUser(isAuthenticated());
+  // }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="page-container">
+      <div className="content-wrap">
+        <NavBar />
+        {/* <NavBar hasUser={hasUser} clearUser={clearUser} /> */}
+        <ApplicationViews />
+        </div>
+        <Footer />
+    
+
+
+ 
+  
+  
     </div>
+
+
   );
 }
 
