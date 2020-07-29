@@ -17,18 +17,20 @@ const NavBar = props => {
   }
   return (
     <Navbar bg="light" expand="lg">
-      <Navbar.Brand href="#home">Wanderlust</Navbar.Brand>
+      <Navbar.Brand href="/home">Wanderlust</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav justify variant="tabs" activeKey="/home">
+          {props.hasUser?
           <Nav.Item>
             <Link className="nav-link" to="/home">Home</Link>
           </Nav.Item>
-
+          : null}
+          {props.hasUser?
           <NavDropdown title="Dropdown" id="nav-dropdown">
             <NavDropdown.Item>
               <Link className="nav-link" to="/wishlist">Wish List</Link>
-            </NavDropdown.Item>
+            </NavDropdown.Item>          
             <NavDropdown.Item>
               <Link className="nav-link" to="/plannedjourneys">Planned Journeys</Link>
             </NavDropdown.Item>
@@ -36,27 +38,37 @@ const NavBar = props => {
               <Link className="nav-link" to="/completedjourneys">Completed Journeys</Link>
             </NavDropdown.Item>
           </NavDropdown>
+          : null}
 
-
+            {props.hasUser?
           <Nav.Item>
 
             <Link className="nav-link" to="/blog">Blog</Link>
 
           </Nav.Item>
+          : null}
+          {props.hasUser?
 
           <Nav.Item>
 
             <Link className="nav-link" to="/gallery">Gallery</Link>
 
           </Nav.Item>
-
-
+          : null}
+          {props.hasUser?
           <Nav.Item>
 
-            <Link className="nav-link" to="/logout">Logout</Link>
+            <Link className="nav-link" onClick={handleLogout} to="/home">Logout</Link>
 
           </Nav.Item>
+          : null}
+          
+          <Nav.Item>
 
+            <Link className="nav-link" to="/login">Login</Link>
+
+          </Nav.Item>
+        
 
         </Nav>
       </Navbar.Collapse>
@@ -64,4 +76,4 @@ const NavBar = props => {
 
   )
 }
-export default NavBar;
+export default withRouter(NavBar);

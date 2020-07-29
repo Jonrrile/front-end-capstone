@@ -5,6 +5,7 @@
       "description": "To see the cherry blossom festival",
       "budget": "$2100",
       "img": "https://media.cntraveler.com/photos/5c3f46c2a5c1d51f43a9d220/16:9/w_2560%2Cc_limit/Japan_Cherry-Blossoms_GettyImages-179989245.jpg",
+      "userId": 1,
       "id": 4
     },
     {
@@ -12,6 +13,7 @@
       "description": "To see The Northern Lights",
       "budget": "$1800",
       "img": "https://www.usnews.com/dims4/USNEWS/07160a4/2147483647/resize/1200x%3E/quality/85/?url=http%3A%2F%2Fcom-usnews-beam-media.s3.amazonaws.com%2F16%2F7e%2Fdb70a6cd4611b0f82e3bd4bf0cd8%2F1-intro-getty.jpg",
+      "userId": 1,
       "id": 5
     }
   ],
@@ -22,6 +24,7 @@
       "budget": "$800",
       "date": "November 16th, 2020",
       "img": "https://www.floridamemory.com/fpc/commerce/K013159.jpg",
+      "userId": 1,
       "id": 5
     }
   ],
@@ -31,6 +34,7 @@
       "description": "My dad and I celebrated our birthdays in Ann Arbor at the Ohio State/Michigan game",
       "date": "11/30/2019",
       "img": "https://assets.simpleviewinc.com/simpleview/image/fetch/c_limit,q_75,w_1200/https://assets.simpleviewinc.com/simpleview/image/upload/crm/annarbor/stadium_tour_010-24320de65056a36_24320f72-5056-a36a-06dac95ae9a433f5.jpg",
+      "userId": 1,
       "id": 1
     },
     {
@@ -38,6 +42,7 @@
       "description": "My friends and I took an impromptu summer senior trip to NYC.",
       "date": "Summer of 2012",
       "img": "https://imageproxy.themaven.net//https%3A%2F%2Fwww.history.com%2F.image%2FMTY1MTc1MTk3ODI0MDAxNjA5%2Ftopic-statue-of-liberty-gettyimages-960610006-promo.jpg",
+      "userId": 1,
       "id": 2
     },
     {
@@ -45,7 +50,16 @@
       "description": "My family and I took a cruise to Cozumel. I got to swim with the dolphins",
       "date": "Summer of 2016",
       "img": "https://secureservercdn.net/198.71.233.179/ybx.6a8.myftpupload.com/wp-content/uploads/2019/08/cozumel-suba-LR.jpg",
+      "userId": 1,
       "id": 3
+    }
+  ],
+  "users": [
+    {
+      "email": "test@gmail.com",
+      "password": "test",
+      "user": "test",
+      "id": 1
     }
   ]
 }

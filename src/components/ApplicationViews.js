@@ -10,36 +10,33 @@ import CompletedJourneyDetail from './CompletedJourneys/CompletedJourneyDetail'
 import PlannedJourneyList from './PlannedJourneys/PlannedJourneyList'
 import PlannedJourneyDetail from './PlannedJourneys/PlannedJourneyDetail'
 import PlannedJourneyForm from './PlannedJourneys/PlannedJourneyForm'
-import Login from "./Login"
+import Login from "./Login/Login"
+import Register from "./Login/Register"
 
-const isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
+//const hasUser () => sessionStorage.getItem("credentials") !== null;
 
 const ApplicationViews = (props) => {
+  const hasUser = props.hasUser;
+  const setUser = props.setUser;
   return (
     <React.Fragment>
-      <Route path="/login" component={Login} />
-      <Route
-        exact
-        path="/"
-        render={props => {
-          return <Home />;
-        }}
-      />
-
       <Route
         exact
         path="/home"
-        render={props => {
-          return <Home />;
+        render={(props) => {
+          return <Home {...props}/>;
         }}
       />
+      <Route path="/login" render={props => {
+        return <Login setUser={setUser} {...props} />
+      }} />
+      <Route path="/register" render={props => {
+        return <Register setUser={setUser} {...props} />
+      }} />
 
       <Route exact path="/wishlist" render={(props) => {
-        if (isAuthenticated()) {
       return <WishJourneyList {...props}/>
-      } else {
-        return <Redirect to="/login" />
-      }
+      
     }} />
       <Route path="/wishlist/:wishjourneyId(\d+)" render={(props) => {
       return <WishJourneyDetail wishjourneyId={parseInt(props.match.params.wishjourneyId)}
@@ -53,11 +50,8 @@ const ApplicationViews = (props) => {
         exact
         path="/completedjourneys"
         render={(props) => {
-          if (isAuthenticated()) {
+        
           return <CompletedJourneyList {...props} />;
-        } else {
-          return <Redirect to="/login" />
-        }
       }}/> 
       <Route path="/completedjourneys/:completedjourneyId(\d+)" render={(props) => {
       return <CompletedJourneyDetail completedjourneyId={parseInt(props.match.params.completedjourneyId)}
@@ -71,11 +65,7 @@ const ApplicationViews = (props) => {
         exact
         path="/plannedjourneys"
         render={(props) => {
-          if (isAuthenticated()) {
             return <PlannedJourneyList {...props} />
-          } else {
-            return <Redirect to="/login" />
-          }
         }}
       /> 
       <Route path="/plannedjourneys/:plannedjourneyId(\d+)" render={(props) => {
