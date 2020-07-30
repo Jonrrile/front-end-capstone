@@ -60,6 +60,12 @@
       "password": "test",
       "user": "test",
       "id": 1
+    },
+    {
+      "email": "jonrrile@ut.utm.edu",
+      "password": "123",
+      "user": "Jon",
+      "id": 2
     }
   ]
 }

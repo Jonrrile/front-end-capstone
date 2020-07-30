@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import WishJourneyManager from '../../modules/WishJourneyManager';
+import { Form, FormControl, FormGroup } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 const WishJourneyForm = props => {
     const [wishjourney, setWishJourney] = useState({ destination: "", description: "", budget: ""});
@@ -24,47 +26,51 @@ const WishJourneyForm = props => {
     };
 
     return (
-        <>
-         <form>
-        <fieldset>
-          <div className="formgrid">
-          <label htmlFor="destination">Destination</label>
-            <input
-              type="text"
-              required
-              onChange={handleFieldChange}
-              id="destination"
-              placeholder="Desired Destination"
-            />
-            <label htmlFor="description">Description</label>
-            <input
-              type="text"
-              required
-              onChange={handleFieldChange}
-              id="description"
-              placeholder="Description or Itinerary"
-            />
-            <label htmlFor="budget">Budget</label>
-            <input
-              type="text"
-              required
-              onChange={handleFieldChange}
-              id="budget"
-              placeholder="Estimated Budget"
-            />
-            
-          </div>
-          <div className="alignRight">
-            <button
-              type="button"
-              disabled={isLoading}
-              onClick={constructNewJourney}
-            >Add!</button>
-          </div>
-        </fieldset>
-      </form>
-      </>
-    );
+      <div>
+     <form>
+    <FormGroup>
+      <label htmlFor="destination">Destination</label>
+        <FormControl
+          type="text"
+          required
+          onChange={handleFieldChange}
+          id="destination"
+          placeholder="Desired Destination"
+        />
+        </FormGroup>
+        <FormGroup>
+        <label htmlFor="description">Description</label>
+        <FormControl
+          type="text"
+          required
+          onChange={handleFieldChange}
+          id="description"
+          placeholder="Description or Itinerary"
+        />
+        </FormGroup>
+        <FormGroup>
+        <label htmlFor="date">Expected Budget</label>
+        <FormControl
+          type="text"
+          required
+          onChange={handleFieldChange}
+          id="budget"
+          placeholder="Expected Budget"
+        />
+        </FormGroup>
+        
+        
+      <div className="alignRight">
+        <Button
+          type="button"
+          disabled={isLoading}
+          onClick={constructNewJourney}
+        >Add to Wish List</Button>
+      </div>
+  </form>
+  </div>
+  
+);
 };
 
 export default WishJourneyForm

@@ -3,6 +3,7 @@ import React from "react";
 const Home = () => {
   return (
       <div>
+      
     <header className="masthead">
     <div className="overlay"></div>
     <div className="container">
@@ -10,7 +11,7 @@ const Home = () => {
         <div className="col-lg-8 col-md-10 mx-auto">
           <div className="site-heading">
             <h1>Welcome Traveler</h1>
-            <span className="subheading">A Blog Theme by Start Bootstrap</span>
+         
           </div>
         </div>
       </div>
@@ -69,15 +70,9 @@ const Home = () => {
               Many say exploration is part of our destiny, but it’s actually our duty to future generations.
             </h3>
           </a>
-          <p className="post-meta">Posted by
-            <a href="#">Start Bootstrap</a>
-            on July 8, 2019</p>
         </div>
         <hr/>
         
-        <div className="clearfix">
-          <a className="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
-        </div>
       </div>
     </div>
   </div>

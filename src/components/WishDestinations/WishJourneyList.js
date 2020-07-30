@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import WishJourneyCard from './WishJourneyCard';
 import WishJourneyManager from '../../modules/WishJourneyManager'
+import { Button, Container } from 'react-bootstrap'
+
+
+
 
 const WishJourneyList = (props) => {
     const [wishjourneys, setWishJourneys] = useState([]); //initial declaration utilizing state for empty array
@@ -22,25 +26,28 @@ const WishJourneyList = (props) => {
 
     return (
         <div>
-            <section className="section-content">
-                <button type="button"
+            
+            
+                <Button type="button"
                     className="btn"
                     onClick={() => { props.history.push("/wishlist/new") }}>
                     Add to Wishlist!
-  </button>
-    {<iframe
-        width="450"
-        height="250"
-        frameBorder="0" 
-        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBTTF5EV5xKOas6sp5POi7JdWf3BlKCeyU&q=Nashville+Tennessee" allowFullScreen>
-      </iframe>}
-            </section>
-            <div className="container">
-                {wishjourneys.map(wishjourney =>
+                </ Button>
+                
+            
+            <Container>
+                {wishjourneys.map(wishjourney => {
+                     if (wishjourney.userId === parseInt(sessionStorage.getItem("activeUser"))) {
+                          return (
                     <WishJourneyCard className="cards" key={wishjourney.id} wishjourney={wishjourney}
                         deleteJourney={deleteJourney}
-                        {...props} />)}
-            </div>
+                        {...props} />
+                        
+                         
+                        )
+                    }
+                })}
+            </Container>
         
         </div>
     );

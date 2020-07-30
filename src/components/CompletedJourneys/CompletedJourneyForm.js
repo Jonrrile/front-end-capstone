@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import CompletedJourneyManager from '../../modules/CompletedJourneyManager';
+import { Form, FormGroup, FormControl, FormContent, FormFile } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 const CompletedJourneyForm = props => {
     const [completedjourney, setCompletedJourney] = useState({ destination: "", description: "", budget: "", img: ""});
@@ -24,53 +26,58 @@ const CompletedJourneyForm = props => {
     };
 
     return (
-        <>
+          <div>
          <form>
-        <fieldset>
-          <div className="formgrid">
+        <FormGroup>
           <label htmlFor="destination">Destination</label>
-            <input
+            <FormControl
               type="text"
               required
               onChange={handleFieldChange}
               id="destination"
               placeholder="Desired Destination"
             />
+            </FormGroup>
+            <FormGroup>
             <label htmlFor="description">Description</label>
-            <input
+            <FormControl
               type="text"
               required
               onChange={handleFieldChange}
               id="description"
               placeholder="Description or Itinerary"
             />
-            <label htmlFor="budget">Budget</label>
-            <input
-              type="text"
+            </FormGroup>
+            <FormGroup>
+            <label htmlFor="date">Dates Traveled</label>
+            <FormControl
+              type="date"
               required
               onChange={handleFieldChange}
-              id="budget"
-              placeholder="Estimated Budget"
+              id="date"
+              placeholder="Dates Traveled"
             />
-            <input
-              type="file"
+            </FormGroup>
+            <FormGroup>
+            <FormFile
               required
               onChange={handleFieldChange}
               id="image"
               placeholder="Select an Image"
             />
+            </FormGroup>
             
-          </div>
+            
           <div className="alignRight">
-            <button
+            <Button
               type="button"
               disabled={isLoading}
               onClick={constructNewJourney}
-            >Add!</button>
+            >Add to Completed Journeys</Button>
           </div>
-        </fieldset>
       </form>
-      </>
+      </div>
+      
     );
 };
 

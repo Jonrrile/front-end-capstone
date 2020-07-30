@@ -2,9 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom"
 import { Card } from 'react-bootstrap'
 import { CardDeck } from 'react-bootstrap'
-
+import { Button } from 'react-bootstrap'
 
 const WishJourneyCard = props => {
+
+
+
     return (
         <CardDeck>
         <Card style={{ width: '18rem'}}>
@@ -13,9 +16,9 @@ const WishJourneyCard = props => {
                 <Card.Title>Destination: {props.wishjourney.destination}</Card.Title>
                 <Card.Text>{props.wishjourney.description}</Card.Text>
                 <Link to={`/wishlist/${props.wishjourney.id}`}>
-                    <button>Details</button>
+                    <Button>Details</ Button>
                 </Link>
-                <button type="button" onClick={() => props.deleteJourney(props.wishjourney.id)}>Delete</button>
+                <Button type="button" onClick={() => props.deleteJourney(props.wishjourney.id)}>Delete</ Button>
                 </Card.Body>
                 </Card>
                 </CardDeck>

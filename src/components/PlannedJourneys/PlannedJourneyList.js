@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PlannedJourneyCard from './PlannedJourneyCard';
 import PlannedJourneyManager from '../../modules/PlannedJourneyManager'
+import { Button } from 'react-bootstrap';
 
 const PlannedJourneyList = (props) => {
     const [plannedjourneys, setPlannedJourneys] = useState([]); //initial declaration utilizing state for empty array
@@ -23,19 +24,24 @@ const PlannedJourneyList = (props) => {
     return (
         <div>
             <section className="section-content">
-                <button type="button"
+                <Button type="button"
                     className="btn"
                     onClick={() => { props.history.push("/plannedjourneys/new") }}>
                     Add to Plans!
-  </button>
+  </ Button>
             </section>
             <div className="container">
-                {plannedjourneys.map(plannedjourney =>
+                {plannedjourneys.map(plannedjourney => {
+                if (plannedjourney.userId === parseInt(sessionStorage.getItem("activeUser"))) {
+                    return (
                     <PlannedJourneyCard className="cards" key={plannedjourney.id} plannedjourney={plannedjourney}
                         deleteJourney={deleteJourney}
-                        {...props} />)}
-            </div>
-          
+                        {...props} />
+                        )
+                    }
+                })}
+                        </div>
+            
         </div>
     );
 };

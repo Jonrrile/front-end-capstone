@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import CompletedJourneyCard from './CompletedJourneyCard';
 import CompletedJourneyManager from '../../modules/CompletedJourneyManager'
+import { Button } from 'react-bootstrap';
 
 const CompletedJourneyList = (props) => {
     const [completedjourneys, setCompletedJourneys] = useState([]); //initial declaration utilizing state for empty array
@@ -22,20 +23,28 @@ const CompletedJourneyList = (props) => {
 
     return (
         <div>
+      
+        <div>
             <section className="section-content">
-                <button type="button"
+                <Button type="button"
                     className="btn"
                     onClick={() => { props.history.push("/completedjourneys/new") }}>
                     Add a Journey
-  </button>
+  </Button>
             </section>
             <div className="container">
-                {completedjourneys.map(completedjourney =>
+                {completedjourneys.map(completedjourney => {
+                    if (completedjourney.userId === parseInt(sessionStorage.getItem("activeUser"))) {
+                    return (
                     <CompletedJourneyCard className="cards" key={completedjourney.id} completedjourney={completedjourney}
                         deleteJourney={deleteJourney}
-                        {...props} />)}
+                        {...props} />
+                        )
+                    }
+                })}
         
             </div>
+        </div>
         </div>
     );
 };

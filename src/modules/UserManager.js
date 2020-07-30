@@ -18,8 +18,6 @@ export default {
         }).then(data => data.json());
     },
     createUser: (newUser) => {
-
-		
 		return fetch(`${remoteURL}/users`, {
 			method: "POST",
 			headers: {

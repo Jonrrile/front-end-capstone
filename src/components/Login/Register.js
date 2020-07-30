@@ -5,7 +5,7 @@ import { Button } from "react-bootstrap";
 import "./Login.css"
 
 const Register = props => {
-  const [credentials, setCredentials] = useState({ email: "", password: "", user: "", img: "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png" });
+  const [credentials, setCredentials] = useState({ email: "", password: "", user: ""});
 
   // Update state whenever an input field is edited
   const handleFieldChange = (evt) => {
@@ -18,7 +18,7 @@ const Register = props => {
 
 const handleRegister = evt => {
   evt.preventDefault();
-  if (credentials.title === "" || credentials.url === "" || credentials.synopsis === "") {
+  if (credentials.email === "" || credentials.password === "" || credentials.user === "") {
     window.alert("Please input a username, password, and email");
   } else {
     
@@ -63,8 +63,8 @@ const handleRegister = evt => {
           <label htmlFor="inputUserName">Create Username</label>
           <FormControl
           onChange={handleFieldChange} 
-          type="username"
-          id="username"
+          type="user"
+          id="user"
           placeholder="Username"
             />
           </FormGroup>
