@@ -13,26 +13,40 @@ import PlannedJourneyForm from './PlannedJourneys/PlannedJourneyForm'
 import Login from "./Login/Login"
 import Register from "./Login/Register"
 
-//const hasUser () => sessionStorage.getItem("credentials") !== null;
+//const hasUser = () => sessionStorage.getItem("credentials") !== null;
 
 const ApplicationViews = (props) => {
   const hasUser = props.hasUser;
   const setUser = props.setUser;
   return (
     <React.Fragment>
+      
       <Route
-        exact
-        path="/home"
-        render={(props) => {
-          return <Home {...props}/>;
-        }}
-      />
+        exact path="/"
+        render={props => {
+          if (hasUser) {
+            return <Home {...props}
+            />
+          }
+          else {
+            return <Redirect to="/login" />
+          }
+        }} />
       <Route path="/login" render={props => {
         return <Login setUser={setUser} {...props} />
       }} />
       <Route path="/register" render={props => {
         return <Register setUser={setUser} {...props} />
       }} />
+        <Route
+        exact
+        path="/home"
+        render={(props) => {
+          
+          return <Home {...props}/>
+        
+    }}
+      /> 
 
       <Route exact path="/wishlist" render={(props) => {
       return <WishJourneyList {...props}/>
