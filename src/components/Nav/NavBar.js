@@ -61,14 +61,15 @@ const NavBar = props => {
             <Link className="nav-link" onClick={handleLogout} to="/home">Logout</Link>
 
           </Nav.Item>
-          : null}
+          :
           
           <Nav.Item>
 
             <Link className="nav-link" to="/login">Login</Link>
 
           </Nav.Item>
-        
+}
+          
 
         </Nav>
       </Navbar.Collapse>
