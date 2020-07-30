@@ -12,7 +12,7 @@ const WishJourneyForm = props => {
         stateToChange[evt.target.id] = evt.target.value;
         setWishJourney(stateToChange);
     };
-    wishjourney.userId = sessionStorage.getItem("activeUser")
+    wishjourney.userId = parseInt(sessionStorage.getItem("activeUser"))
     const constructNewJourney = evt => {
         evt.preventDefault();
         if (wishjourney.destination === "" || wishjourney.description === "" || wishjourney.budget === "") {

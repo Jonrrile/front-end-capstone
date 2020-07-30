@@ -4,9 +4,9 @@ import { Form, FormGroup, FormControl, FormContent, FormFile } from "react-boots
 import { Button } from "react-bootstrap";
 
 const CompletedJourneyForm = props => {
-    const [completedjourney, setCompletedJourney] = useState({ destination: "", description: "", budget: "", img: ""});
+    const [completedjourney, setCompletedJourney] = useState({ destination: "", description: "", date: "", img: "", userId: ""});
     const [isLoading, setIsLoading] = useState(false);
-
+    completedjourney.userId = parseInt(sessionStorage.getItem("activeUser"))
     const handleFieldChange = evt => {
         const stateToChange = { ...completedjourney};
         stateToChange[evt.target.id] = evt.target.value;
@@ -15,7 +15,7 @@ const CompletedJourneyForm = props => {
 
     const constructNewJourney = evt => {
         evt.preventDefault();
-        if (completedjourney.destination === "" || completedjourney.description === "" || completedjourney.budget === "") {
+        if (completedjourney.destination === "" || completedjourney.description === "" || completedjourney.date === "") {
             window.alert("Please fill out all fields!");
         } else {
             setIsLoading(true);

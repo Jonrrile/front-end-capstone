@@ -5,9 +5,9 @@ import { Form } from 'react-bootstrap';
 import { FormGroup, FormControl, FormFile } from 'react-bootstrap';
 
 const PlannedJourneyForm = props => {
-    const [plannedjourney, setPlannedJourney] = useState({ destination: "", description: "", budget: ""});
+    const [plannedjourney, setPlannedJourney] = useState({ destination: "", description: "", budget: "", userId: ""});
     const [isLoading, setIsLoading] = useState(false);
-
+    plannedjourney.userId = parseInt(sessionStorage.getItem("activeUser"))
     const handleFieldChange = evt => {
         const stateToChange = { ...plannedjourney};
         stateToChange[evt.target.id] = evt.target.value;
@@ -76,7 +76,7 @@ const PlannedJourneyForm = props => {
           type="button"
           disabled={isLoading}
           onClick={constructNewJourney}
-        >Add to Completed Journeys</Button>
+        >Add to Planned Journeys</Button>
       </div>
   </form>
   </div>
