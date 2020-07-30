@@ -4,7 +4,7 @@ import { Form, FormControl, FormGroup } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 
 const WishJourneyForm = props => {
-    const [wishjourney, setWishJourney] = useState({ destination: "", description: "", budget: ""});
+    const [wishjourney, setWishJourney] = useState({ destination: "", description: "", budget: "", userId:""});
     const [isLoading, setIsLoading] = useState(false);
 
     const handleFieldChange = evt => {
@@ -12,7 +12,7 @@ const WishJourneyForm = props => {
         stateToChange[evt.target.id] = evt.target.value;
         setWishJourney(stateToChange);
     };
-
+    wishjourney.userId = sessionStorage.getItem("activeUser")
     const constructNewJourney = evt => {
         evt.preventDefault();
         if (wishjourney.destination === "" || wishjourney.description === "" || wishjourney.budget === "") {

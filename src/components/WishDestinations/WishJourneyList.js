@@ -26,7 +26,7 @@ const WishJourneyList = (props) => {
 
     return (
         <div>
-            
+                 
             
                 <Button type="button"
                     className="btn"
@@ -36,17 +36,16 @@ const WishJourneyList = (props) => {
                 
             
             <Container>
-                {wishjourneys.map(wishjourney => {
-                     if (wishjourney.userId === parseInt(sessionStorage.getItem("activeUser"))) {
-                          return (
+                {wishjourneys.map(wishjourney => 
+                   
                     <WishJourneyCard className="cards" key={wishjourney.id} wishjourney={wishjourney}
                         deleteJourney={deleteJourney}
                         {...props} />
                         
                          
-                        )
-                    }
-                })}
+                    //     )
+                    // }
+                )}
             </Container>
         
         </div>
