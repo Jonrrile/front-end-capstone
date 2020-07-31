@@ -3,7 +3,7 @@ import WishJourneyManager from "../../modules/WishJourneyManager"
 import { Button } from 'react-bootstrap';
 
 const WishJourneyEditForm = props => {
-    const [wishjourney, setWishJourney] = useState({ destination: "", description: "", userId: "", date: "", budget: ""});
+    const [wishjourney, setWishJourney] = useState({ destination: "", description: "", userId: "", url: "", budget: ""});
     const [isLoading, setIsLoading] = useState(false);
     
     const handleFieldChange = evt => {
@@ -22,12 +22,33 @@ const WishJourneyEditForm = props => {
         destination: wishjourney.destination,
         description: wishjourney.description,
         userId: wishjourney.userId = parseInt(sessionStorage.getItem("activeUser")),
-        date: wishjourney.date,
+        url: wishjourney.url,
         budget: wishjourney.budget
     };
 
     WishJourneyManager.update(editedWishJourney)
         .then(() => props.history.push("/wishlist"))
+    }
+
+    const transferJourney = evt => {
+        evt.preventDefault()
+        setIsLoading(true);
+
+    // This is an edit, so we need the id
+    const transferedWishJourney = {
+        id: props.match.params.wishjourneyId,
+        destination: wishjourney.destination,
+        description: wishjourney.description,
+        userId: wishjourney.userId = parseInt(sessionStorage.getItem("activeUser")),
+        url: wishjourney.url,
+        budget: wishjourney.budget
+    };
+
+    WishJourneyManager.post(transferedWishJourney)
+        .then(() => props.history.push("/plannedjourneys"))
+        // .then(() => WishJourneyManager.delete(evt)
+        // .then(() => WishJourneyManager.getAll().then(setWishJourney)))
+        //trying to get it to delete it from the wishlist after sending to planned.
     }
 
     useEffect(() => {
@@ -64,16 +85,6 @@ const WishJourneyEditForm = props => {
                             id="description"
                             value={wishjourney.description}
                         />
-                        <label htmlFor="description">Dates</label>
-
-                        <input
-                            type="date"
-                            required
-                            className="form-control"
-                            onChange={handleFieldChange}
-                            id="date"
-                            value={wishjourney.date}
-                        />
                         <label htmlFor="description">Budget</label>
 
                         <input
@@ -81,7 +92,7 @@ const WishJourneyEditForm = props => {
                             required
                             className="form-control"
                             onChange={handleFieldChange}
-                            id="date"
+                            id="budget"
                             value={wishjourney.budget}
                         />
                         
@@ -92,6 +103,11 @@ const WishJourneyEditForm = props => {
                             onClick={updateExistingWishJourney}
                             className="btn btn-primary"
                         >Submit</Button>
+                        <Button
+                            type="button" disabled={isLoading}
+                            onClick={transferJourney}
+                            className="btn btn-primary"
+                        >Move to Planned</Button>
                     </div>
                 </fieldset>
             </form>
