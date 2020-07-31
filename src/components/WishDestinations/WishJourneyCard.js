@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom"
 import { Card } from 'react-bootstrap'
-import { CardDeck } from 'react-bootstrap'
+import { CardColumns } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
 
 const WishJourneyCard = props => {
@@ -9,22 +9,22 @@ const WishJourneyCard = props => {
 
 
     return (
-        <CardDeck>
-        <Card style={{ width: '18rem'}}>
+        
+        <Card>
         <Card.Img variant="top" src={props.wishjourney.url}/>
             <Card.Body>
-                <Card.Title>Destination: {props.wishjourney.destination}</Card.Title>
+                <Card.Title>{props.wishjourney.destination}</Card.Title>
+                <Card.Subtitle className="mb-2 text-muted">Journey Description:</Card.Subtitle>
                 <Card.Text>{props.wishjourney.description}</Card.Text>
-                <Link to={`/wishlist/${props.wishjourney.id}`}>
-                    <Button>Details</ Button>
-                </Link>
+                <Card.Subtitle className="mb-2 text-muted">Budget Required:</Card.Subtitle>
+                <Card.Text>{props.wishjourney.budget}</Card.Text>
                 <Button type="button" onClick={() => props.deleteJourney(props.wishjourney.id)}>Delete</ Button>
-               <Button type="button" onClick={() => props.history.push(`/wishlist/${props.wishjourney.id}/edit`)}>
-                   Edit
-               </Button>
+               <Button type="button" onClick={() => props.history.push(`/wishlist/${props.wishjourney.id}/edit`)}>Edit</Button>
+               
+               
                 </Card.Body>
                 </Card>
-                </CardDeck>
+                
     )
 }
 

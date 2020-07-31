@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import WishJourneyCard from './WishJourneyCard';
 import WishJourneyManager from '../../modules/WishJourneyManager'
-import { Button, Container } from 'react-bootstrap'
+import { Button, Container,  CardColumns } from 'react-bootstrap'
+
 
 
 
@@ -35,7 +36,7 @@ const WishJourneyList = (props) => {
                 </ Button>
                 
             
-            <Container>
+            <CardColumns>
                 {wishjourneys.map(wishjourney => {
                    if (wishjourney.userId === parseInt(sessionStorage.getItem("activeUser"))) {
                     return (
@@ -47,7 +48,7 @@ const WishJourneyList = (props) => {
                         )
                     }
                 })}
-            </Container>
+            </CardColumns>
         
         </div>
     );

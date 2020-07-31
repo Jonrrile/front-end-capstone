@@ -2,19 +2,35 @@
   "wishjourneys": [
     {
       "destination": "Florida",
-      "description": "boof",
+      "description": "To see Ernest Hemingway's Library",
       "budget": "$1100",
       "url": "https://keywest.com/img/home-photo-4.jpg",
       "userId": 1,
-      "id": 10
+      "id": 12
     },
     {
-      "destination": "Florida",
-      "description": "boof",
-      "budget": "$1100",
-      "url": "https://keywest.com/img/home-photo-4.jpg",
+      "destination": "Michigan ",
+      "description": "Take my dad to see another Michigan Wolverines Football game. ",
+      "budget": "$800",
+      "url": "https://www.mlive.com/resizer/ltnPCMTkx87IpCKrfe7dDyPaBBs=/1280x0/smart/advancelocal-adapter-image-uploads.s3.amazonaws.com/image.mlive.com/home/mlive-media/width2048/img/wolverines_impact/photo/23282908-standard.jpg",
       "userId": 1,
-      "id": 11
+      "id": 13
+    },
+    {
+      "id": 14,
+      "destination": "Alaska",
+      "description": "I would love to see The Northern Lights one day",
+      "userId": 1,
+      "url": "https://www.usnews.com/dims4/USNEWS/c861844/2147483647/thumbnail/640x420/quality/85/?url=http%3A%2F%2Fcom-usnews-beam-media.s3.amazonaws.com%2F16%2F7e%2Fdb70a6cd4611b0f82e3bd4bf0cd8%2F1-intro-getty.jpg",
+      "budget": "$1150"
+    },
+    {
+      "destination": "Ireland",
+      "description": "I bet a pub crawl in Ireland would be fun",
+      "budget": "$3000",
+      "url": "https://www.state.gov/wp-content/uploads/2018/11/Ireland-2109x1406.jpg",
+      "userId": 1,
+      "id": 15
     }
   ],
   "plannedjourneys": [
@@ -41,6 +57,22 @@
       "userId": 1,
       "date": "2020-07-31",
       "id": 9
+    },
+    {
+      "id": "12",
+      "destination": "Florida",
+      "description": "To see Ernest Hemingway's Library",
+      "userId": 1,
+      "url": "https://keywest.com/img/home-photo-4.jpg",
+      "budget": "$1100"
+    },
+    {
+      "id": "14",
+      "destination": "Alaska",
+      "description": "I would love to see The Northern Lights one day",
+      "userId": 1,
+      "url": "https://www.usnews.com/dims4/USNEWS/c861844/2147483647/thumbnail/640x420/quality/85/?url=http%3A%2F%2Fcom-usnews-beam-media.s3.amazonaws.com%2F16%2F7e%2Fdb70a6cd4611b0f82e3bd4bf0cd8%2F1-intro-getty.jpg",
+      "budget": "$1150"
     }
   ],
   "completedjourneys": [

@@ -2,7 +2,6 @@ import { Route, Redirect } from "react-router-dom";
 import React from "react";
 import Home from './Home'
 import WishJourneyList from './WishDestinations/WishJourneyList'
-import WishJourneyDetail from './WishDestinations/WishJourneyDetail'
 import WishJourneyForm from './WishDestinations/WishJourneyForm'
 import CompletedJourneyList from './CompletedJourneys/CompletedJourneyList'
 import CompletedJourneyForm from './CompletedJourneys/CompletedJourneyForm'
@@ -53,11 +52,7 @@ const ApplicationViews = (props) => {
       return <WishJourneyList {...props}/>
       
     }} />
-      <Route exact path="/wishlist/:wishjourneyId(\d+)" render={(props) => {
-      return <WishJourneyDetail wishjourneyId={parseInt(props.match.params.wishjourneyId)}
-      {...props}
-      />
-      }} />
+      
       <Route path="/wishlist/new" render={(props) => {
         return <WishJourneyForm {...props} />
       }} />
