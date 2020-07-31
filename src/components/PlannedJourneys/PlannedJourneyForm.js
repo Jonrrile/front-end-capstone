@@ -5,7 +5,7 @@ import { Form } from 'react-bootstrap';
 import { FormGroup, FormControl, FormFile } from 'react-bootstrap';
 
 const PlannedJourneyForm = props => {
-    const [plannedjourney, setPlannedJourney] = useState({ destination: "", description: "", budget: "", userId: ""});
+    const [plannedjourney, setPlannedJourney] = useState({ destination: "", description: "", budget: "", url: "", userId: ""});
     const [isLoading, setIsLoading] = useState(false);
     plannedjourney.userId = parseInt(sessionStorage.getItem("activeUser"))
     const handleFieldChange = evt => {
@@ -67,6 +67,16 @@ const PlannedJourneyForm = props => {
           onChange={handleFieldChange}
           id="budget"
           placeholder="Expected Budget"
+        />
+        </FormGroup>
+        <FormGroup>
+        <label htmlFor="url">Planned Journey Picture</label>
+        <FormControl
+          type="text"
+          required
+          onChange={handleFieldChange}
+          id="url"
+          placeholder="Choose Image"
         />
         </FormGroup>
         

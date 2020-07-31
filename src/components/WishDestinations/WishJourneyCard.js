@@ -11,7 +11,7 @@ const WishJourneyCard = props => {
     return (
         <CardDeck>
         <Card style={{ width: '18rem'}}>
-        <Card.Img variant="top" src={props.wishjourney.img}/>
+        <Card.Img variant="top" src={props.wishjourney.url}/>
             <Card.Body>
                 <Card.Title>Destination: {props.wishjourney.destination}</Card.Title>
                 <Card.Text>{props.wishjourney.description}</Card.Text>
