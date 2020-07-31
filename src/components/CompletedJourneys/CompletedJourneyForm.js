@@ -4,9 +4,33 @@ import { Form, FormGroup, FormControl, FormContent, FormFile } from "react-boots
 import { Button } from "react-bootstrap";
 
 const CompletedJourneyForm = props => {
-    const [completedjourney, setCompletedJourney] = useState({ destination: "", description: "", date: "", img: "", userId: ""});
+    const [completedjourney, setCompletedJourney] = useState({ destination: "", url: "",description: "", date: "", userId: ""});
     const [isLoading, setIsLoading] = useState(false);
+    // const [image, setImage] = useState('')
+    // const [loading, setLoading] = useState(false)
+
+    // const uploadImage = async e => {
+    //   const files = e.target.files
+    //   const data = new FormData()
+    //   data.append('file', files[0])
+    //   data.append('upload_present', 'jonrrile')
+    //   setLoading(true)
+    //   const res = await fetch (
+    //     '	https://api.cloudinary.com/v1_1/jonrrile',
+    //     {
+    //       method: 'POST',
+    //       body: data
+    //     }
+    //   )
+    //   const file = await res.json()
+
+    //   setImage(file.secure_url)
+    //   setCompletedJourney({...completedjourney, url: file.secure_url})
+    //   CompletedJourneyManager.getAll()
+    //   setLoading(false)
+    // }
     completedjourney.userId = parseInt(sessionStorage.getItem("activeUser"))
+    
     const handleFieldChange = evt => {
         const stateToChange = { ...completedjourney};
         stateToChange[evt.target.id] = evt.target.value;
@@ -58,16 +82,17 @@ const CompletedJourneyForm = props => {
               placeholder="Dates Traveled"
             />
             </FormGroup>
-            <FormGroup>
-            <FormFile
-              required
+              <input type="text"
+              name="url"
+              id="url"
+              placeholder="Destination Photo URL"
               onChange={handleFieldChange}
-              id="image"
-              placeholder="Select an Image"
-            />
-            </FormGroup>
-            
-            
+              />
+              {/* {loading ? (
+              <h3>Loading...</h3>
+              ) : (
+                <img src={image} />
+              )} */}
           <div className="alignRight">
             <Button
               type="button"

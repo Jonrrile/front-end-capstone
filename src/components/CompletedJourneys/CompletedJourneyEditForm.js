@@ -1,39 +1,39 @@
 import React, { useState, useEffect } from "react"
-import PlannedJourneyManager from "../../modules/PlannedJourneyManager"
+import CompletedJourneyManager from "../../modules/CompletedJourneyManager"
 import { Button } from 'react-bootstrap';
 
-const PlannedJourneyEditForm = props => {
-    const [plannedjourney, setPlannedJourney] = useState({ destination: "", description: "", userId: "", date: "", budget: ""});
+const CompletedJourneyEditForm = props => {
+    const [completedjourney, setCompletedJourney] = useState({ destination: "", description: "", userId: "", date: "", budget: ""});
     const [isLoading, setIsLoading] = useState(false);
     
     const handleFieldChange = evt => {
-        const stateToChange = { ...plannedjourney };
+        const stateToChange = { ...completedjourney };
         stateToChange[evt.target.id] = evt.target.value;
-        setPlannedJourney(stateToChange);
+        setCompletedJourney(stateToChange);
     };
 
-    const updateExistingPlannedJourney = evt => {
+    const updateExistingCompletedJourney = evt => {
         evt.preventDefault()
         setIsLoading(true);
 
     // This is an edit, so we need the id
-    const editedPlannedJourney = {
-        id: props.match.params.plannedjourneyId,
-        destination: plannedjourney.destination,
-        description: plannedjourney.description,
-        userId: plannedjourney.userId = parseInt(sessionStorage.getItem("activeUser")),
-        date: plannedjourney.date,
-        budget: plannedjourney.budget
+    const editedCompletedJourney = {
+        id: props.match.params.completedjourneyid,
+        destination: completedjourney.destination,
+        description: completedjourney.description,
+        userId: completedjourney.userId = parseInt(sessionStorage.getItem("activeUser")),
+        date: completedjourney.date,
+        budget: completedjourney.budget
     };
 
-    PlannedJourneyManager.update(editedPlannedJourney)
-        .then(() => props.history.push("/plannedjourneys"))
+    CompletedJourneyManager.update(editedCompletedJourney)
+        .then(() => props.history.push("/completedjourneys"))
     }
 
     useEffect(() => {
-        PlannedJourneyManager.get(props.match.params.plannedjourneyId)
-            .then(plannedjourney => {
-                setPlannedJourney(plannedjourney);
+        CompletedJourneyManager.get(props.match.params.completedjourneyid)
+            .then(completedjourney => {
+                setCompletedJourney(completedjourney);
                 setIsLoading(false);
             });
     }, []);
@@ -51,7 +51,7 @@ const PlannedJourneyEditForm = props => {
                             className="form-control"
                             onChange={handleFieldChange}
                             id="destination"
-                            value={plannedjourney.destination}
+                            value={completedjourney.destination}
                         />
                         
                         <label htmlFor="description">Description</label>
@@ -62,7 +62,7 @@ const PlannedJourneyEditForm = props => {
                             className="form-control"
                             onChange={handleFieldChange}
                             id="description"
-                            value={plannedjourney.description}
+                            value={completedjourney.description}
                         />
                         <label htmlFor="description">Dates</label>
 
@@ -72,24 +72,14 @@ const PlannedJourneyEditForm = props => {
                             className="form-control"
                             onChange={handleFieldChange}
                             id="date"
-                            value={plannedjourney.date}
-                        />
-                        <label htmlFor="description">Budget</label>
-
-                        <input
-                            type="text"
-                            required
-                            className="form-control"
-                            onChange={handleFieldChange}
-                            id="date"
-                            value={plannedjourney.budget}
+                            value={completedjourney.date}
                         />
                         
                     </div>
                     <div className="alignRight">
                         <Button
                             type="button" disabled={isLoading}
-                            onClick={updateExistingPlannedJourney}
+                            onClick={updateExistingCompletedJourney}
                             className="btn btn-primary"
                         >Submit</Button>
                     </div>
@@ -99,4 +89,4 @@ const PlannedJourneyEditForm = props => {
     );
 }
 
-export default PlannedJourneyEditForm
+export default CompletedJourneyEditForm

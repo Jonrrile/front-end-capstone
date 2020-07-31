@@ -22,12 +22,12 @@ export default {
         }).then(data => data.json())
     },
     update(editedWishJourney) {
-        return fetch(`${remoteURL}/wishjourneys/${editedWishJourney.id}`, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(editedWishJourney)
-        }).then(data => data.json());
+      return fetch(`${remoteURL}/wishjourneys/${editedWishJourney.id}`, {
+          method: "PUT",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify(editedWishJourney)
+      }).then(data => data.json());
     }
 }

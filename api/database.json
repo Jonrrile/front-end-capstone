@@ -1,12 +1,20 @@
 {
   "wishjourneys": [
     {
-      "destination": "Japan ",
-      "description": "To see the cherry blossom festival",
-      "budget": "$2100",
-      "img": "https://media.cntraveler.com/photos/5c3f46c2a5c1d51f43a9d220/16:9/w_2560%2Cc_limit/Japan_Cherry-Blossoms_GettyImages-179989245.jpg",
+      "destination": "Florida",
+      "description": "boof",
+      "budget": "$1100",
+      "url": "https://keywest.com/img/home-photo-4.jpg",
       "userId": 1,
-      "id": 4
+      "id": 10
+    },
+    {
+      "destination": "Florida",
+      "description": "boof",
+      "budget": "$1100",
+      "url": "https://keywest.com/img/home-photo-4.jpg",
+      "userId": 1,
+      "id": 11
     }
   ],
   "plannedjourneys": [
@@ -19,32 +27,30 @@
       "id": 6,
       "destination": "Florida",
       "description": "Ann Arbor Go Blue!!"
+    },
+    {
+      "id": 7,
+      "destination": "Florida",
+      "description": "Ann Arbor Go Blue!!"
+    },
+    {
+      "destination": "Florida",
+      "description": "To see Ernest Hemingway's Library",
+      "budget": "$1100",
+      "url": "https://keywest.com/img/home-photo-4.jpg",
+      "userId": 1,
+      "date": "2020-07-31",
+      "id": 9
     }
   ],
   "completedjourneys": [
     {
-      "destination": "Ann Arbor, Michigan ",
-      "description": "My dad and I celebrated our birthdays in Ann Arbor at the Ohio State/Michigan game",
-      "date": "11/30/2019",
-      "img": "https://assets.simpleviewinc.com/simpleview/image/fetch/c_limit,q_75,w_1200/https://assets.simpleviewinc.com/simpleview/image/upload/crm/annarbor/stadium_tour_010-24320de65056a36_24320f72-5056-a36a-06dac95ae9a433f5.jpg",
+      "destination": "Florida",
+      "url": "https://keywest.com/img/home-photo-4.jpg",
+      "description": "To see Ernest Hemingway's Library",
+      "date": "2020-07-31",
       "userId": 1,
-      "id": 1
-    },
-    {
-      "destination": "New York City, New York ",
-      "description": "My friends and I took an impromptu summer senior trip to NYC.",
-      "date": "Summer of 2012",
-      "img": "https://imageproxy.themaven.net//https%3A%2F%2Fwww.history.com%2F.image%2FMTY1MTc1MTk3ODI0MDAxNjA5%2Ftopic-statue-of-liberty-gettyimages-960610006-promo.jpg",
-      "userId": 1,
-      "id": 2
-    },
-    {
-      "destination": "Cozumel, Mexico ",
-      "description": "My family and I took a cruise to Cozumel. I got to swim with the dolphins",
-      "date": "Summer of 2016",
-      "img": "https://secureservercdn.net/198.71.233.179/ybx.6a8.myftpupload.com/wp-content/uploads/2019/08/cozumel-suba-LR.jpg",
-      "userId": 1,
-      "id": 3
+      "id": 4
     }
   ],
   "users": [

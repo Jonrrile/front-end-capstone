@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 import WishJourneyManager from '../../modules/WishJourneyManager';
-import { Form, FormControl, FormGroup } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
+import { FormGroup, FormControl, FormFile } from 'react-bootstrap';
 
 const WishJourneyForm = props => {
-    const [wishjourney, setWishJourney] = useState({ destination: "", description: "", budget: "", userId:""});
+    const [wishjourney, setWishJourney] = useState({ destination: "", description: "", budget: "", url: "", userId: ""});
     const [isLoading, setIsLoading] = useState(false);
-
+    wishjourney.userId = parseInt(sessionStorage.getItem("activeUser"))
     const handleFieldChange = evt => {
         const stateToChange = { ...wishjourney};
         stateToChange[evt.target.id] = evt.target.value;
         setWishJourney(stateToChange);
     };
-    wishjourney.userId = parseInt(sessionStorage.getItem("activeUser"))
+
     const constructNewJourney = evt => {
         evt.preventDefault();
         if (wishjourney.destination === "" || wishjourney.description === "" || wishjourney.budget === "") {
@@ -58,6 +59,16 @@ const WishJourneyForm = props => {
           placeholder="Expected Budget"
         />
         </FormGroup>
+        <FormGroup>
+        <label htmlFor="url">Wishlist Picture</label>
+        <FormControl
+          type="text"
+          required
+          onChange={handleFieldChange}
+          id="url"
+          placeholder="Choose Image"
+        />
+        </FormGroup>
         
         
       <div className="alignRight">
@@ -65,7 +76,7 @@ const WishJourneyForm = props => {
           type="button"
           disabled={isLoading}
           onClick={constructNewJourney}
-        >Add to Wish List</Button>
+        >Add to Wishlist</Button>
       </div>
   </form>
   </div>
