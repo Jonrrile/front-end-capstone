@@ -61,10 +61,11 @@ const ApplicationViews = (props) => {
       <Route path="/wishlist/new" render={(props) => {
         return <WishJourneyForm {...props} />
       }} />
-      <Route path="wishlist/:wishlistId(\d+)/edit"
-      render={props => {
-          return <WishJourneyEditForm {...props} />
-      }} />
+      <Route
+        path="/wishlist/:wishjourneyId(\d+)/edit"
+        render={props => {
+            return <WishJourneyEditForm {...props} />
+        }} />
        <Route
         exact
         path="/completedjourneys"

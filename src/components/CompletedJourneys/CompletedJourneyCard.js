@@ -11,7 +11,7 @@ const CompletedJourneyCard = props => {
         <Container>
         <CardGroup>
         <Card style={{ width: '18rem'}}>
-        <Card.Img variant="top" src={props.completedjourney.img}/>
+        <Card.Img variant="top" src={props.completedjourney.url}/>
             <Card.Body>
                 <Card.Title>{props.completedjourney.destination}</Card.Title>
                 <Card.Text>{props.completedjourney.date}</Card.Text>
@@ -19,6 +19,7 @@ const CompletedJourneyCard = props => {
                     <Button>Details</Button>
                 </Link>
                 <Button type="button" onClick={() => props.deleteJourney(props.completedjourney.id)}>Delete</Button>
+                <Button type="button" onClick={() => props.history.push(`/completedjourneys/${props.completedjourney.id}/edit`)}>Edit</Button>
                 </Card.Body>
                 </Card>
                 </CardGroup>

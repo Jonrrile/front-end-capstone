@@ -16,7 +16,7 @@ const PlannedJourneyCard = props => {
                 <Link to={`/plannedjourneys/${props.plannedjourney.id}`}>
                     <Button>Details</ Button>
                 </Link>
-                <button type="button" onClick={() => props.history.push(`/plannedjourneys/${props.plannedjourney.id}/edit`)}>Edit</button>
+                <Button type="button" onClick={() => props.history.push(`/plannedjourneys/${props.plannedjourney.id}/edit`)}>Edit</Button>
                 <Button type="button" onClick={() => props.deleteJourney(props.plannedjourney.id)}>Delete</ Button>
                 </Card.Body>
                 </Card>
