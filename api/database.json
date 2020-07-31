@@ -7,32 +7,18 @@
       "img": "https://media.cntraveler.com/photos/5c3f46c2a5c1d51f43a9d220/16:9/w_2560%2Cc_limit/Japan_Cherry-Blossoms_GettyImages-179989245.jpg",
       "userId": 1,
       "id": 4
-    },
-    {
-      "destination": "Michigan ",
-      "description": "Ann Arbor Go Blue!!",
-      "budget": "$1100",
-      "userId": 4,
-      "id": 5
     }
   ],
   "plannedjourneys": [
     {
-      "destination": "Key West",
-      "description": "To see Ernest Hemingway's Library",
-      "budget": "$800",
-      "date": "November 16th, 2020",
-      "img": "https://www.floridamemory.com/fpc/commerce/K013159.jpg",
-      "userId": 1,
-      "id": 5
+      "id": 5,
+      "destination": "Florida",
+      "description": "To see Ernest Hemingway's Library"
     },
     {
-      "destination": "Michigan ",
-      "description": "Ann Arbor Go Blue!!",
-      "budget": "$800",
-      "userId": 4,
-      "date": "2020-07-29",
-      "id": 6
+      "id": 6,
+      "destination": "Florida",
+      "description": "Ann Arbor Go Blue!!"
     }
   ],
   "completedjourneys": [
@@ -59,15 +45,6 @@
       "img": "https://secureservercdn.net/198.71.233.179/ybx.6a8.myftpupload.com/wp-content/uploads/2019/08/cozumel-suba-LR.jpg",
       "userId": 1,
       "id": 3
-    },
-    {
-      "destination": "Key West",
-      "description": "To see Ernest Hemingway's Library",
-      "date": "2020-07-29",
-      "img": "",
-      "userId": 4,
-      "image": "C:\\fakepath\\blue.jpg",
-      "id": 4
     }
   ],
   "users": [

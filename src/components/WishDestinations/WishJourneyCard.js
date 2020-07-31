@@ -19,6 +19,9 @@ const WishJourneyCard = props => {
                     <Button>Details</ Button>
                 </Link>
                 <Button type="button" onClick={() => props.deleteJourney(props.wishjourney.id)}>Delete</ Button>
+               <Button type="button" onClick={() => props.history.push(`/wishlist/${props.wishjourney.id}/edit`)}>
+                   Edit
+               </Button>
                 </Card.Body>
                 </Card>
                 </CardDeck>

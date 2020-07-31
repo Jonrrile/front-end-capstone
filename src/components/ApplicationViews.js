@@ -12,7 +12,8 @@ import PlannedJourneyDetail from './PlannedJourneys/PlannedJourneyDetail'
 import PlannedJourneyForm from './PlannedJourneys/PlannedJourneyForm'
 import Login from "./Login/Login"
 import Register from "./Login/Register"
-
+import WishJourneyEditForm from "./WishDestinations/WishJourneyEditForm"
+import PlannedJourneyEditForm from "./PlannedJourneys/PlannedJourneyEditForm"
 //const hasUser = () => sessionStorage.getItem("credentials") !== null;
 
 const ApplicationViews = (props) => {
@@ -52,13 +53,17 @@ const ApplicationViews = (props) => {
       return <WishJourneyList {...props}/>
       
     }} />
-      <Route path="/wishlist/:wishjourneyId(\d+)" render={(props) => {
+      <Route exact path="/wishlist/:wishjourneyId(\d+)" render={(props) => {
       return <WishJourneyDetail wishjourneyId={parseInt(props.match.params.wishjourneyId)}
       {...props}
       />
       }} />
       <Route path="/wishlist/new" render={(props) => {
         return <WishJourneyForm {...props} />
+      }} />
+      <Route path="wishlist/:wishlistId(\d+)/edit"
+      render={props => {
+          return <WishJourneyEditForm {...props} />
       }} />
        <Route
         exact
@@ -90,6 +95,13 @@ const ApplicationViews = (props) => {
       <Route path="/plannedjourneys/new" render={(props) => {
         return <PlannedJourneyForm {...props} />
       }} />
+      <Route
+        path="/plannedjourneys/:plannedjourneyId(\d+)/edit"
+        render={props => {
+            return <PlannedJourneyEditForm {...props} />
+          
+          
+        }} />
       
     </React.Fragment>
   );
