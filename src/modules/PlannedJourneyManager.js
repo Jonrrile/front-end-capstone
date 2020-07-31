@@ -20,5 +20,14 @@ post(newJourney) {
         },
         body: JSON.stringify(newJourney)
     }).then(data => data.json())
+},
+update(editedPlannedJourney) {
+  return fetch(`${remoteURL}/plannedjourneys/${editedPlannedJourney.id}`, {
+      method: "PUT",
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify(editedPlannedJourney)
+  }).then(data => data.json());
 }
 }
