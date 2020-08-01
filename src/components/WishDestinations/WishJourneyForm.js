@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import WishJourneyManager from '../../modules/WishJourneyManager';
-import { Button } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
 import { FormGroup, FormControl, FormFile } from 'react-bootstrap';
 
@@ -27,10 +27,10 @@ const WishJourneyForm = props => {
     };
 
     return (
-      <div>
-     <form>
+      <div className="journey_form_container">
+     <Form className="journey_form">
     <FormGroup>
-      <label htmlFor="destination">Destination</label>
+      <Form.Label>Destination</Form.Label>
         <FormControl
           type="text"
           required
@@ -40,9 +40,10 @@ const WishJourneyForm = props => {
         />
         </FormGroup>
         <FormGroup>
-        <label htmlFor="description">Description</label>
+        <Form.Label>Description</Form.Label>
         <FormControl
-          type="text"
+          as="textarea"
+          rows="3"
           required
           onChange={handleFieldChange}
           id="description"
@@ -50,7 +51,7 @@ const WishJourneyForm = props => {
         />
         </FormGroup>
         <FormGroup>
-        <label htmlFor="date">Expected Budget</label>
+        <Form.Label>Expected Budget</Form.Label>
         <FormControl
           type="text"
           required
@@ -60,7 +61,7 @@ const WishJourneyForm = props => {
         />
         </FormGroup>
         <FormGroup>
-        <label htmlFor="url">Wishlist Picture</label>
+        <Form.Label>Wishlist Picture</Form.Label>
         <FormControl
           type="text"
           required
@@ -69,17 +70,15 @@ const WishJourneyForm = props => {
           placeholder="Choose Image"
         />
         </FormGroup>
-        
-        
-      <div className="alignRight">
         <Button
-          type="button"
+          variant="outline-primary"
+          type="submit"
           disabled={isLoading}
           onClick={constructNewJourney}
-        >Add to Wishlist</Button>
+        >Add to Wishlist
+        </Button>
+      </Form>
       </div>
-  </form>
-  </div>
   
 );
 };

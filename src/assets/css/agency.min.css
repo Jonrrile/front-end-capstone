@@ -1,8 +1,4 @@
-/*!
- * Start Bootstrap - Clean Blog v5.0.9 (https://startbootstrap.com/themes/clean-blog)
- * Copyright 2013-2020 Start Bootstrap
- * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/LICENSE)
- */
+
 body {
     font-size: 20px;
     color: #212529;
@@ -145,7 +141,7 @@ img::-moz-selection {
     #mainNav {
         transition: background-color .2s;
         transform: translate3d(0, 0, 0);
-        /* -webkit-backface-visibility: hidden */
+        
     }
 
     #mainNav.is-fixed {

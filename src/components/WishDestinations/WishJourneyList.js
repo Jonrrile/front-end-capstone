@@ -27,15 +27,15 @@ const WishJourneyList = (props) => {
 
     return (
         <div>
-                 
-            
-                <Button type="button"
+                 <div className="wish_list_header">
+                     <h1>Your Wish List: <Button variant="outline-primary" type="button"
                     className="btn"
                     onClick={() => { props.history.push("/wishlist/new") }}>
                     Add to Wishlist!
-                </ Button>
+                </ Button> </h1>
+                 </div>
                 
-            
+            <Container>
             <CardColumns>
                 {wishjourneys.map(wishjourney => {
                    if (wishjourney.userId === parseInt(sessionStorage.getItem("activeUser"))) {
@@ -49,8 +49,9 @@ const WishJourneyList = (props) => {
                     }
                 })}
             </CardColumns>
+            </Container>
+            </div>
         
-        </div>
     );
 };
 

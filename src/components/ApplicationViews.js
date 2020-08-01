@@ -7,7 +7,6 @@ import CompletedJourneyList from './CompletedJourneys/CompletedJourneyList'
 import CompletedJourneyForm from './CompletedJourneys/CompletedJourneyForm'
 import CompletedJourneyDetail from './CompletedJourneys/CompletedJourneyDetail'
 import PlannedJourneyList from './PlannedJourneys/PlannedJourneyList'
-import PlannedJourneyDetail from './PlannedJourneys/PlannedJourneyDetail'
 import PlannedJourneyForm from './PlannedJourneys/PlannedJourneyForm'
 import Login from "./Login/Login"
 import Register from "./Login/Register"
@@ -83,11 +82,7 @@ const ApplicationViews = (props) => {
             return <PlannedJourneyList {...props} />
         }}
       /> 
-      <Route path="/plannedjourneys/:plannedjourneyId(\d+)" render={(props) => {
-      return <PlannedJourneyDetail plannedjourneyId={parseInt(props.match.params.plannedjourneyId)}
-      {...props}
-      />
-      }} />
+    
       <Route path="/plannedjourneys/new" render={(props) => {
         return <PlannedJourneyForm {...props} />
       }} />

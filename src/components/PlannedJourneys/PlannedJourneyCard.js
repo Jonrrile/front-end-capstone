@@ -7,20 +7,24 @@ import { Button } from 'react-bootstrap'
 
 const PlannedJourneyCard = props => {
     return (
-        <CardDeck>
-        <Card style={{ width: '18rem'}}>
-        <Card.Img variant="top" src={props.plannedjourney.url}/>
+        <Card>
+        <Card.Img variant="top" 
+        width={171}
+        height={180}
+        src={props.plannedjourney.url}/>
             <Card.Body>
                 <Card.Title>{props.plannedjourney.destination}</Card.Title>
+                <Card.Subtitle className="mb-2 text-muted">Journey Description:</Card.Subtitle>
+                <Card.Text>{props.plannedjourney.description}</Card.Text>
+                <Card.Subtitle className="mb-2 text-muted">Planned Dates:</Card.Subtitle>
                 <Card.Text>{props.plannedjourney.dates}</Card.Text>
-                <Link to={`/plannedjourneys/${props.plannedjourney.id}`}>
-                    <Button>Details</ Button>
-                </Link>
-                <Button type="button" onClick={() => props.history.push(`/plannedjourneys/${props.plannedjourney.id}/edit`)}>Edit</Button>
-                <Button type="button" onClick={() => props.deleteJourney(props.plannedjourney.id)}>Delete</ Button>
+                <Card.Subtitle className="mb-2 text-muted">Budget:</Card.Subtitle>
+                <Card.Text>{props.plannedjourney.budget}</Card.Text>     
+                <Button variant="outline-primary" type="button" onClick={() => props.deleteJourney(props.plannedjourney.id)}>Delete</ Button>
+                <Button variant="outline-primary" type="button" onClick={() => props.history.push(`/plannedjourneys/${props.plannedjourney.id}/edit`)}>Edit</Button>                
                 </Card.Body>
                 </Card>
-                </CardDeck>
+               
     )
 }
 

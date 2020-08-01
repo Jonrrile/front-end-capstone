@@ -29,3 +29,17 @@
     max-height: 50px;
 }
 
+.journey_form_container {
+    padding: 60px 0;
+    
+}
+
+.journey_form {
+        margin: 0 auto;
+        max-width: 320px;
+}
+
+
+.wish_list_header {
+    padding: 60px 0;
+}
