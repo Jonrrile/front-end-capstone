@@ -5,7 +5,7 @@ import WishJourneyList from './WishDestinations/WishJourneyList'
 import WishJourneyForm from './WishDestinations/WishJourneyForm'
 import CompletedJourneyList from './CompletedJourneys/CompletedJourneyList'
 import CompletedJourneyForm from './CompletedJourneys/CompletedJourneyForm'
-import CompletedJourneyDetail from './CompletedJourneys/CompletedJourneyDetail'
+import CompletedJourneyEditForm from './CompletedJourneys/CompletedJourneyEditForm'
 import PlannedJourneyList from './PlannedJourneys/PlannedJourneyList'
 import PlannedJourneyForm from './PlannedJourneys/PlannedJourneyForm'
 import Login from "./Login/Login"
@@ -67,14 +67,15 @@ const ApplicationViews = (props) => {
         
           return <CompletedJourneyList {...props} />;
       }}/> 
-      <Route path="/completedjourneys/:completedjourneyId(\d+)" render={(props) => {
-      return <CompletedJourneyDetail completedjourneyId={parseInt(props.match.params.completedjourneyId)}
-      {...props}
-      />
-      }} />
+      
       <Route path="/completedjourneys/new" render={(props) => {
         return <CompletedJourneyForm {...props} />
       }} />
+      <Route
+        path="/completedjourneys/:completedjourneyId(\d+)/edit"
+        render={props => {
+            return <CompletedJourneyEditForm {...props} />
+        }} />
        <Route
         exact
         path="/plannedjourneys"

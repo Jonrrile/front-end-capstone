@@ -17,7 +17,7 @@ const PlannedJourneyCard = props => {
                 <Card.Subtitle className="mb-2 text-muted">Journey Description:</Card.Subtitle>
                 <Card.Text>{props.plannedjourney.description}</Card.Text>
                 <Card.Subtitle className="mb-2 text-muted">Planned Dates:</Card.Subtitle>
-                <Card.Text>{props.plannedjourney.dates}</Card.Text>
+                <Card.Text>{props.plannedjourney.date}</Card.Text>
                 <Card.Subtitle className="mb-2 text-muted">Budget:</Card.Subtitle>
                 <Card.Text>{props.plannedjourney.budget}</Card.Text>     
                 <Button variant="outline-primary" type="button" onClick={() => props.deleteJourney(props.plannedjourney.id)}>Delete</ Button>

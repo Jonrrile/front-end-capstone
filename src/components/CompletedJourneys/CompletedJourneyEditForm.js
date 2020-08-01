@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react"
 import CompletedJourneyManager from "../../modules/CompletedJourneyManager"
-import { Button } from 'react-bootstrap';
+import { Button, FormGroup, Form, FormControl } from 'react-bootstrap';
 
 const CompletedJourneyEditForm = props => {
-    const [completedjourney, setCompletedJourney] = useState({ destination: "", description: "", userId: "", date: "", budget: ""});
+    const [completedjourney, setCompletedJourney] = useState({ destination: "", description: "", userId: "", date: "", url: ""});
     const [isLoading, setIsLoading] = useState(false);
     
     const handleFieldChange = evt => {
@@ -18,12 +18,12 @@ const CompletedJourneyEditForm = props => {
 
     // This is an edit, so we need the id
     const editedCompletedJourney = {
-        id: props.match.params.completedjourneyid,
+        id: props.match.params.completedjourneyId,
         destination: completedjourney.destination,
         description: completedjourney.description,
         userId: completedjourney.userId = parseInt(sessionStorage.getItem("activeUser")),
         date: completedjourney.date,
-        budget: completedjourney.budget
+        url: completedjourney.url
     };
 
     CompletedJourneyManager.update(editedCompletedJourney)
@@ -31,7 +31,7 @@ const CompletedJourneyEditForm = props => {
     }
 
     useEffect(() => {
-        CompletedJourneyManager.get(props.match.params.completedjourneyid)
+        CompletedJourneyManager.get(props.match.params.completedjourneyId)
             .then(completedjourney => {
                 setCompletedJourney(completedjourney);
                 setIsLoading(false);
@@ -39,53 +39,52 @@ const CompletedJourneyEditForm = props => {
     }, []);
 
     return (
-        <>
-            <form>
-                <fieldset>
-                    <div className="formgrid">
+        <div className="journey_form_container">
+        <Form className="journey_form">
+            <FormGroup>
+                <Form.Label>Destination</Form.Label>
+                <FormControl
+                 type="text"
+                 required
+                 className="form-control"
+                 onChange={handleFieldChange}
+                 id="destination"
+                 value={completedjourney.destination}
+                 />
+                </FormGroup>
+                <FormGroup>
+                 <Form.Label>Description</Form.Label>
+                <FormControl
+                    
+                        type="text"
+                        required
+                        className="form-control"
+                        onChange={handleFieldChange}
+                        id="description"
+                        value={completedjourney.description}
+                    />
+                    </FormGroup>
+                    <FormGroup>
+                    <Form.Label>Date</Form.Label>
+                    <FormControl
+                        type="date"
+                        required
+                        className="form-control"
+                        onChange={handleFieldChange}
+                        id="date"
+                        value={completedjourney.date}
+                    />
+                    </FormGroup>
+                    <Button
+                        variant="outline-primary" 
+                        type="button" disabled={isLoading}
+                        onClick={updateExistingCompletedJourney}
                         
-                    <label htmlFor="destination">Journey destination</label>
-                        <input
-                            type="text"
-                            required
-                            className="form-control"
-                            onChange={handleFieldChange}
-                            id="destination"
-                            value={completedjourney.destination}
-                        />
-                        
-                        <label htmlFor="description">Description</label>
-
-                        <input
-                            type="text"
-                            required
-                            className="form-control"
-                            onChange={handleFieldChange}
-                            id="description"
-                            value={completedjourney.description}
-                        />
-                        <label htmlFor="description">Dates</label>
-
-                        <input
-                            type="date"
-                            required
-                            className="form-control"
-                            onChange={handleFieldChange}
-                            id="date"
-                            value={completedjourney.date}
-                        />
-                        
-                    </div>
-                    <div className="alignRight">
-                        <Button
-                            type="button" disabled={isLoading}
-                            onClick={updateExistingCompletedJourney}
-                            className="btn btn-primary"
-                        >Submit</Button>
-                    </div>
-                </fieldset>
-            </form>
-        </>
+                    >Submit</Button>
+                </Form>
+            
+        </div>
+    
     );
 }
 

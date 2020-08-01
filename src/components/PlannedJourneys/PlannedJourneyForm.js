@@ -5,7 +5,7 @@ import { Form } from 'react-bootstrap';
 import { FormGroup, FormControl, FormFile } from 'react-bootstrap';
 
 const PlannedJourneyForm = props => {
-    const [plannedjourney, setPlannedJourney] = useState({ destination: "", description: "", budget: "", url: "", userId: ""});
+    const [plannedjourney, setPlannedJourney] = useState({ destination: "", description: "", budget: "", url: "", date: "", userId: ""});
     const [isLoading, setIsLoading] = useState(false);
     plannedjourney.userId = parseInt(sessionStorage.getItem("activeUser"))
     const handleFieldChange = evt => {
@@ -27,22 +27,23 @@ const PlannedJourneyForm = props => {
     };
 
     return (
-      <div>
-     <form>
+      <div className="journey_form_container">
+     <Form className="journey_form">
     <FormGroup>
-      <label htmlFor="destination">Destination</label>
+      <Form.Label>Destination</Form.Label>
         <FormControl
           type="text"
           required
           onChange={handleFieldChange}
           id="destination"
-          placeholder="Desired Destination"
+          placeholder="Planned Destination"
         />
         </FormGroup>
         <FormGroup>
-        <label htmlFor="description">Description</label>
+        <Form.Label>Itenerary</Form.Label>
         <FormControl
-          type="text"
+          as="textarea"
+          rows="3"
           required
           onChange={handleFieldChange}
           id="description"
@@ -50,17 +51,18 @@ const PlannedJourneyForm = props => {
         />
         </FormGroup>
         <FormGroup>
-        <label htmlFor="date">Projected Dates</label>
+          <Form.Label>Travel Date</Form.Label>
         <FormControl
           type="date"
+          rows="3"
           required
           onChange={handleFieldChange}
           id="date"
-          placeholder="Dates Traveled"
+          placeholder="Travel Date"
         />
         </FormGroup>
         <FormGroup>
-        <label htmlFor="date">Expected Budget</label>
+        <Form.Label>Expected Budget</Form.Label>
         <FormControl
           type="text"
           required
@@ -70,7 +72,7 @@ const PlannedJourneyForm = props => {
         />
         </FormGroup>
         <FormGroup>
-        <label htmlFor="url">Planned Journey Picture</label>
+        <Form.Label>Picture</Form.Label>
         <FormControl
           type="text"
           required
@@ -79,17 +81,15 @@ const PlannedJourneyForm = props => {
           placeholder="Choose Image"
         />
         </FormGroup>
-        
-        
-      <div className="alignRight">
         <Button
-          type="button"
+          variant="outline-primary"
+          type="submit"
           disabled={isLoading}
           onClick={constructNewJourney}
-        >Add to Planned Journeys</Button>
+        >Plan it!
+        </Button>
+      </Form>
       </div>
-  </form>
-  </div>
   
 );
 };

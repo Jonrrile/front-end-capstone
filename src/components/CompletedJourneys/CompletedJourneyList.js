@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import CompletedJourneyCard from './CompletedJourneyCard';
 import CompletedJourneyManager from '../../modules/CompletedJourneyManager'
-import { Button } from 'react-bootstrap';
+import { Button, Container, CardColumns } from 'react-bootstrap';
 
 const CompletedJourneyList = (props) => {
-    const [completedjourneys, setCompletedJourneys] = useState([]); //initial declaration utilizing state for empty array
+    const [completedjourneys, setCompletedJourneys] = useState([]); 
 
     const getCompletedJourneys = () => {
         return CompletedJourneyManager.getAll().then(completedjourneysFromAPI => {
@@ -23,18 +23,20 @@ const CompletedJourneyList = (props) => {
 
     return (
         <div>
-      
-        <div>
-            <section className="section-content">
-                <Button type="button"
-                    className="btn"
+           <div className="wish_list_header">
+               <h1>Your Completed Journeys: 
+                     <Button type="button"
+                   variant="outline-primary"
                     onClick={() => { props.history.push("/completedjourneys/new") }}>
-                    Add a Journey
-  </Button>
-            </section>
-            <div className="container">
+                    Add to Plans!
+                    </ Button>
+                    </h1>
+                    </div>
+    
+            <Container>
+                <CardColumns>
                 {completedjourneys.map(completedjourney => {
-                    if (completedjourney.userId === parseInt(sessionStorage.getItem("activeUser"))) {
+                if (completedjourney.userId === parseInt(sessionStorage.getItem("activeUser"))) {
                     return (
                     <CompletedJourneyCard className="cards" key={completedjourney.id} completedjourney={completedjourney}
                         deleteJourney={deleteJourney}
@@ -42,10 +44,9 @@ const CompletedJourneyList = (props) => {
                         )
                     }
                 })}
-        
-            </div>
-        </div>
-        </div>
+                      </CardColumns>
+                      </Container>
+                    </div>
     );
 };
 
