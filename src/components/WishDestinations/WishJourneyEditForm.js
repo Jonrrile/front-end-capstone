@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react"
 import WishJourneyManager from "../../modules/WishJourneyManager"
-import { Button } from 'react-bootstrap';
+import TransferJourneyManager from '../../modules/TransferJourneyManager'
+import { Button, FormGroup } from 'react-bootstrap';
+import { Form, FormControl } from 'react-bootstrap'
 
 const WishJourneyEditForm = props => {
     const [wishjourney, setWishJourney] = useState({ destination: "", description: "", userId: "", url: "", budget: ""});
@@ -34,6 +36,8 @@ const WishJourneyEditForm = props => {
         evt.preventDefault()
         setIsLoading(true);
 
+       
+
     // This is an edit, so we need the id
     const transferedWishJourney = {
         id: props.match.params.wishjourneyId,
@@ -44,7 +48,7 @@ const WishJourneyEditForm = props => {
         budget: wishjourney.budget
     };
 
-    WishJourneyManager.post(transferedWishJourney)
+    TransferJourneyManager.post(transferedWishJourney)
         .then(() => props.history.push("/plannedjourneys"))
         // .then(() => WishJourneyManager.delete(evt)
         // .then(() => WishJourneyManager.getAll().then(setWishJourney)))
@@ -60,24 +64,24 @@ const WishJourneyEditForm = props => {
     }, []);
 
     return (
-        <>
-            <form>
-                <fieldset>
-                    <div className="formgrid">
+        
+        <div className="journey_form_container">
+            <Form className="journey_form">
+                <FormGroup>
+                    <Form.Label>Destination</Form.Label>
+                    <FormControl
+                     type="text"
+                     required
+                     className="form-control"
+                     onChange={handleFieldChange}
+                     id="destination"
+                     value={wishjourney.destination}
+                     />
+                    </FormGroup>
+                    <FormGroup>
+                     <Form.Label>Description</Form.Label>
+                    <FormControl
                         
-                    <label htmlFor="destination">Journey destination</label>
-                        <input
-                            type="text"
-                            required
-                            className="form-control"
-                            onChange={handleFieldChange}
-                            id="destination"
-                            value={wishjourney.destination}
-                        />
-                        
-                        <label htmlFor="description">Description</label>
-
-                        <input
                             type="text"
                             required
                             className="form-control"
@@ -85,9 +89,10 @@ const WishJourneyEditForm = props => {
                             id="description"
                             value={wishjourney.description}
                         />
-                        <label htmlFor="description">Budget</label>
-
-                        <input
+                        </FormGroup>
+                        <FormGroup>
+                        <Form.Label>Budget</Form.Label>
+                        <FormControl
                             type="text"
                             required
                             className="form-control"
@@ -95,23 +100,23 @@ const WishJourneyEditForm = props => {
                             id="budget"
                             value={wishjourney.budget}
                         />
-                        
-                    </div>
-                    <div className="alignRight">
+                        </FormGroup>
                         <Button
+                            variant="outline-primary" 
                             type="button" disabled={isLoading}
                             onClick={updateExistingWishJourney}
-                            className="btn btn-primary"
+                            
                         >Submit</Button>
                         <Button
+                            variant="outline-primary" 
                             type="button" disabled={isLoading}
                             onClick={transferJourney}
-                            className="btn btn-primary"
+                          
                         >Move to Planned</Button>
-                    </div>
-                </fieldset>
-            </form>
-        </>
+                    </Form>
+                
+            </div>
+        
     );
 }
 

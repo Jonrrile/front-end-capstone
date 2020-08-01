@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react"
 import PlannedJourneyManager from "../../modules/PlannedJourneyManager"
-import { Button } from 'react-bootstrap';
-
+import { Button, FormGroup } from 'react-bootstrap';
+import { Form, FormControl } from 'react-bootstrap'
+import TransferPlannedManager from '../../modules/TransferPlannedManager'
 const PlannedJourneyEditForm = props => {
-    const [plannedjourney, setPlannedJourney] = useState({ destination: "", description: "", userId: "", date: "", budget: ""});
+    const [plannedjourney, setPlannedJourney] = useState({ destination: "", description: "", userId: "", date: "", url: "", budget: ""});
     const [isLoading, setIsLoading] = useState(false);
     
     const handleFieldChange = evt => {
@@ -22,6 +23,7 @@ const PlannedJourneyEditForm = props => {
         destination: plannedjourney.destination,
         description: plannedjourney.description,
         userId: plannedjourney.userId = parseInt(sessionStorage.getItem("activeUser")),
+        url: plannedjourney.url,
         date: plannedjourney.date,
         budget: plannedjourney.budget
     };
@@ -30,7 +32,26 @@ const PlannedJourneyEditForm = props => {
         .then(() => props.history.push("/plannedjourneys"))
     }
 
-    useEffect(() => {
+    const transferJourney = evt => {
+        evt.preventDefault()
+        setIsLoading(true);
+
+        const transferedPlannedJourney = {
+            id: props.match.params.plannedjourneyId,
+            destination: plannedjourney.destination,
+            description: plannedjourney.description,
+            userId: plannedjourney.userId = parseInt(sessionStorage.getItem("activeUser")),
+            url: plannedjourney.url,
+            date: plannedjourney.date,
+            budget: plannedjourney.budget
+        };
+    
+        TransferPlannedManager.post(transferedPlannedJourney)
+        .then(() => props.history.push("/completedjourneys"))
+    
+    }
+    
+        useEffect(() => {
         PlannedJourneyManager.get(props.match.params.plannedjourneyId)
             .then(plannedjourney => {
                 setPlannedJourney(plannedjourney);
@@ -39,24 +60,23 @@ const PlannedJourneyEditForm = props => {
     }, []);
 
     return (
-        <>
-            <form>
-                <fieldset>
-                    <div className="formgrid">
+        <div className="journey_form_container">
+            <Form className="journey_form">
+                <FormGroup>
+                    <Form.Label>Destination</Form.Label>
+                    <FormControl
+                     type="text"
+                     required
+                     className="form-control"
+                     onChange={handleFieldChange}
+                     id="destination"
+                     value={plannedjourney.destination}
+                     />
+                    </FormGroup>
+                    <FormGroup>
+                     <Form.Label>Description</Form.Label>
+                    <FormControl
                         
-                    <label htmlFor="destination">Journey destination</label>
-                        <input
-                            type="text"
-                            required
-                            className="form-control"
-                            onChange={handleFieldChange}
-                            id="destination"
-                            value={plannedjourney.destination}
-                        />
-                        
-                        <label htmlFor="description">Description</label>
-
-                        <input
                             type="text"
                             required
                             className="form-control"
@@ -64,38 +84,34 @@ const PlannedJourneyEditForm = props => {
                             id="description"
                             value={plannedjourney.description}
                         />
-                        <label htmlFor="description">Dates</label>
-
-                        <input
-                            type="date"
-                            required
-                            className="form-control"
-                            onChange={handleFieldChange}
-                            id="date"
-                            value={plannedjourney.date}
-                        />
-                        <label htmlFor="description">Budget</label>
-
-                        <input
+                        </FormGroup>
+                        <FormGroup>
+                        <Form.Label>Budget</Form.Label>
+                        <FormControl
                             type="text"
                             required
                             className="form-control"
                             onChange={handleFieldChange}
-                            id="date"
+                            id="budget"
                             value={plannedjourney.budget}
                         />
-                        
-                    </div>
-                    <div className="alignRight">
+                        </FormGroup>
                         <Button
+                            variant="outline-primary" 
                             type="button" disabled={isLoading}
                             onClick={updateExistingPlannedJourney}
-                            className="btn btn-primary"
+                            
                         >Submit</Button>
-                    </div>
-                </fieldset>
-            </form>
-        </>
+                        <Button
+                            variant="outline-primary" 
+                            type="button" disabled={isLoading}
+                            onClick={transferJourney}
+                          
+                        >Move to Completed</Button>
+                    </Form>
+                
+            </div>
+        
     );
 }
 

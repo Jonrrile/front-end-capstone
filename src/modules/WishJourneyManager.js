@@ -12,6 +12,7 @@ export default {
             method: "DELETE"
         }).then(result => result.json())
     },
+    
     post(newJourney) {
         return fetch(`${remoteURL}/wishjourneys`, {
             method: "POST",
@@ -19,15 +20,6 @@ export default {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(newJourney)
-        }).then(data => data.json())
-    },
-    post(transferedWishJourney) {
-        return fetch(`${remoteURL}/plannedjourneys`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(transferedWishJourney)
         }).then(data => data.json())
     },
     update(editedWishJourney) {
