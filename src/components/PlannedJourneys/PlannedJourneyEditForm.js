@@ -3,6 +3,8 @@ import PlannedJourneyManager from "../../modules/PlannedJourneyManager"
 import { Button, FormGroup } from 'react-bootstrap';
 import { Form, FormControl } from 'react-bootstrap'
 import TransferPlannedManager from '../../modules/TransferPlannedManager'
+
+
 const PlannedJourneyEditForm = props => {
     const [plannedjourney, setPlannedJourney] = useState({ destination: "", description: "", userId: "", date: "", url: "", budget: ""});
     const [isLoading, setIsLoading] = useState(false);

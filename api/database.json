@@ -35,46 +35,40 @@
   ],
   "plannedjourneys": [
     {
-      "id": 5,
+      "id": 8,
       "destination": "Florida",
-      "description": "To see Ernest Hemingway's Library"
-    },
-    {
-      "id": 6,
-      "destination": "Florida",
-      "description": "Ann Arbor Go Blue!!"
-    },
-    {
-      "id": 7,
-      "destination": "Florida",
-      "description": "Ann Arbor Go Blue!!"
-    },
-    {
-      "id": "14",
-      "destination": "Alaska",
-      "description": "To see the northern lights",
+      "description": "B",
       "userId": 1,
-      "url": "https://www.usnews.com/dims4/USNEWS/c861844/2147483647/thumbnail/640x420/quality/85/?url=http%3A%2F%2Fcom-usnews-beam-media.s3.amazonaws.com%2F16%2F7e%2Fdb70a6cd4611b0f82e3bd4bf0cd8%2F1-intro-getty.jpg",
-      "budget": "expensive"
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596230528/Capstone/5c49e6925241471b35591a04_dpgnmz.jpg",
+      "date": "2020-07-31",
+      "budget": "A"
     },
     {
+      "id": 9,
       "destination": "Japan",
-      "description": "To see Ernest Hemingway's Library",
-      "budget": "$5500",
-      "url": "",
+      "description": "Cherry blossoms",
       "userId": 1,
-      "date": "2020-07-24",
-      "id": "iQNE1C5"
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596230528/Capstone/5c49e6925241471b35591a04_dpgnmz.jpg",
+      "date": "2020-07-30",
+      "budget": "$3000"
     }
   ],
   "completedjourneys": [
     {
       "destination": "Florida",
-      "url": "https://keywest.com/img/home-photo-4.jpg",
-      "description": "To see Ernest Hemingway's Library",
+      "description": "Saw an alligator",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596242391/Capstone/amazing-hawaii-beach-with-green-mountains_vqzixc.jpg",
       "date": "2020-07-31",
       "userId": 1,
-      "id": 4
+      "id": 1
+    },
+    {
+      "id": 2,
+      "destination": "Florida",
+      "description": "A",
+      "userId": 1,
+      "date": "2020-07-02",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596242391/Capstone/amazing-hawaii-beach-with-green-mountains_vqzixc.jpg"
     }
   ],
   "users": [

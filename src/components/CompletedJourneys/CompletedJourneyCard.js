@@ -1,29 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom"
 import { Card } from 'react-bootstrap'
-import { CardGroup} from 'react-bootstrap'
+import { CardDeck} from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
-import { Container } from 'react-bootstrap'
 
 
 const CompletedJourneyCard = props => {
     return (
-        <Container>
-        <CardGroup>
-        <Card style={{ width: '18rem'}}>
-        <Card.Img variant="top" src={props.completedjourney.url}/>
+        <Card >
+        <Card.Img variant="top"
+         width={171}
+         height={180} 
+         src={props.completedjourney.url}/>
             <Card.Body>
                 <Card.Title>{props.completedjourney.destination}</Card.Title>
-                <Card.Text>{props.completedjourney.date}</Card.Text>
-                <Link to={`/completedjourneys/${props.completedjourney.id}`}>
-                    <Button>Details</Button>
-                </Link>
-                <Button type="button" onClick={() => props.deleteJourney(props.completedjourney.id)}>Delete</Button>
-                <Button type="button" onClick={() => props.history.push(`/completedjourneys/${props.completedjourney.id}/edit`)}>Edit</Button>
+                <Card.Subtitle className="mb-2 text-muted">Journey Description:</Card.Subtitle>
+                <Card.Text>{props.completedjourney.description}</Card.Text>
+                <Card.Subtitle className="mb-2 text-muted">Dates Traveled</Card.Subtitle>
+                <Card.Text>{props.completedjourney.date}</Card.Text>     
+                <Button className="btn" variant="outline-primary" type="button" onClick={() => props.deleteJourney(props.completedjourney.id)}>Delete</ Button>
+               <Button className="btn"  variant="outline-primary" type="button" onClick={() => props.history.push(`/completedjourneys/${props.completedjourney.id}/edit`)}>Edit</Button>           
                 </Card.Body>
                 </Card>
-                </CardGroup>
-                </Container>
     )
 }
 

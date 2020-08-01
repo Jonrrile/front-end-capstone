@@ -6,6 +6,7 @@ import { Button } from 'react-bootstrap'
 
 const WishJourneyCard = props => {
 
+
     return (
         <Card >
         <Card.Img variant="top"
