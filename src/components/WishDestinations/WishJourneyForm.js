@@ -5,7 +5,7 @@ import { Form } from 'react-bootstrap';
 import { FormGroup, FormControl, FormFile } from 'react-bootstrap';
 
 const WishJourneyForm = props => {
-    const [wishjourney, setWishJourney] = useState({ destination: "", description: "", budget: "", url: "", userId: ""});
+    const [wishjourney, setWishJourney] = useState({ destination: "", description: "", budget: "", url: "", userId: "", date: ""});
     const [isLoading, setIsLoading] = useState(false);
     wishjourney.userId = parseInt(sessionStorage.getItem("activeUser"))
     const handleFieldChange = evt => {

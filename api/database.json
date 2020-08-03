@@ -23,33 +23,34 @@
       "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596230528/Capstone/5c49e6925241471b35591a04_dpgnmz.jpg",
       "userId": 1,
       "id": 17
-    },
-    {
-      "destination": "Hawaii",
-      "description": "Who wouldn't want to visit",
-      "budget": "More than I can afford",
-      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596242391/Capstone/amazing-hawaii-beach-with-green-mountains_vqzixc.jpg",
-      "userId": 1,
-      "id": 19
     }
   ],
   "plannedjourneys": [
     {
-      "id": 8,
-      "destination": "Florida",
-      "description": "B",
+      "id": "17",
+      "destination": "Japan",
+      "description": "It would be fun to experience the culture and the beautiful landscape",
       "userId": 1,
       "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596230528/Capstone/5c49e6925241471b35591a04_dpgnmz.jpg",
-      "date": "2020-07-31",
-      "budget": "A"
+      "date": "2020-08-14",
+      "budget": "$5500"
     },
     {
-      "id": 9,
-      "destination": "Japan",
-      "description": "Cherry blossoms",
+      "id": "14",
+      "destination": "Alaska",
+      "description": "To see the northern lights",
       "userId": 1,
-      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596230528/Capstone/5c49e6925241471b35591a04_dpgnmz.jpg",
-      "date": "2020-07-30",
+      "url": "https://www.usnews.com/dims4/USNEWS/c861844/2147483647/thumbnail/640x420/quality/85/?url=http%3A%2F%2Fcom-usnews-beam-media.s3.amazonaws.com%2F16%2F7e%2Fdb70a6cd4611b0f82e3bd4bf0cd8%2F1-intro-getty.jpg",
+      "date": "2020-08-24",
+      "budget": "$6000"
+    },
+    {
+      "id": "15",
+      "destination": "Ireland",
+      "description": "I bet a pub crawl in Ireland would be fun",
+      "userId": 1,
+      "url": "https://www.state.gov/wp-content/uploads/2018/11/Ireland-2109x1406.jpg",
+      "date": "2020-08-20",
       "budget": "$3000"
     }
   ],
@@ -63,12 +64,21 @@
       "id": 1
     },
     {
-      "id": 2,
-      "destination": "Florida",
-      "description": "A",
+      "id": "14",
+      "destination": "Alaska",
+      "description": "To see the northern lights",
       "userId": 1,
-      "date": "2020-07-02",
-      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596242391/Capstone/amazing-hawaii-beach-with-green-mountains_vqzixc.jpg"
+      "date": "2020-08-25",
+      "url": "https://www.usnews.com/dims4/USNEWS/c861844/2147483647/thumbnail/640x420/quality/85/?url=http%3A%2F%2Fcom-usnews-beam-media.s3.amazonaws.com%2F16%2F7e%2Fdb70a6cd4611b0f82e3bd4bf0cd8%2F1-intro-getty.jpg"
+    },
+    {
+      "id": "15",
+      "destination": "Ireland",
+      "description": "I bet a pub crawl in Ireland would be fun",
+      "userId": 1,
+      "url": "https://www.state.gov/wp-content/uploads/2018/11/Ireland-2109x1406.jpg",
+      "date": "2020-08-20",
+      "budget": "$3000"
     }
   ],
   "users": [
