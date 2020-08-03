@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PlannedJourneyCard from './PlannedJourneyCard';
 import PlannedJourneyManager from '../../modules/PlannedJourneyManager'
 import { Button, Container, CardColumns } from 'react-bootstrap';
+import SimpleMap from '../Map/Map'
 
 const PlannedJourneyList = (props) => {
     const [plannedjourneys, setPlannedJourneys] = useState([]); //initial declaration utilizing state for empty array
@@ -46,6 +47,9 @@ const PlannedJourneyList = (props) => {
                 })}
                       </CardColumns>
                       </Container>
+                      <Container>
+                <SimpleMap />
+                </Container>
                     </div>
     );
 };
