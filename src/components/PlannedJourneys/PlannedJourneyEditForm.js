@@ -88,6 +88,17 @@ const PlannedJourneyEditForm = props => {
                         />
                         </FormGroup>
                         <FormGroup>
+                            <Form.Label>Planned Dates</Form.Label>
+                        <FormControl
+                            type="date"
+                            required
+                            className="form-control"
+                            onChange={handleFieldChange}
+                            id="date"
+                            value={plannedjourney.date}
+                        />
+                        </FormGroup>
+                        <FormGroup>
                         <Form.Label>Budget</Form.Label>
                         <FormControl
                             type="text"
@@ -97,6 +108,7 @@ const PlannedJourneyEditForm = props => {
                             id="budget"
                             value={plannedjourney.budget}
                         />
+                      
                         </FormGroup>
                         <Button
                             variant="outline-primary" 
@@ -108,8 +120,9 @@ const PlannedJourneyEditForm = props => {
                             variant="outline-primary" 
                             type="button" disabled={isLoading}
                             onClick={transferJourney}
+                            >
                           
-                        >Move to Completed</Button>
+                        Move to Completed</Button>
                     </Form>
                 
             </div>
