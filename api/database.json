@@ -9,12 +9,12 @@
       "budget": "expensive"
     },
     {
+      "id": 15,
       "destination": "Ireland",
       "description": "I bet a pub crawl in Ireland would be fun",
-      "budget": "$3000",
-      "url": "https://www.state.gov/wp-content/uploads/2018/11/Ireland-2109x1406.jpg",
       "userId": 1,
-      "id": 15
+      "url": "https://www.state.gov/wp-content/uploads/2018/11/Ireland-2109x1406.jpg",
+      "budget": "$3000"
     },
     {
       "destination": "Japan",
@@ -50,7 +50,6 @@
       "description": "I bet a pub crawl in Ireland would be fun",
       "userId": 1,
       "url": "https://www.state.gov/wp-content/uploads/2018/11/Ireland-2109x1406.jpg",
-      "date": "2020-08-20",
       "budget": "$3000"
     }
   ],

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import CompletedJourneyCard from './CompletedJourneyCard';
 import CompletedJourneyManager from '../../modules/CompletedJourneyManager'
 import { Button, Container, CardColumns } from 'react-bootstrap';
-
+import SimpleMap from '../Map/Map'
 const CompletedJourneyList = (props) => {
     const [completedjourneys, setCompletedJourneys] = useState([]); 
 
@@ -46,6 +46,9 @@ const CompletedJourneyList = (props) => {
                 })}
                       </CardColumns>
                       </Container>
+                      <Container>
+                <SimpleMap />
+                </Container>
                     </div>
     );
 };
