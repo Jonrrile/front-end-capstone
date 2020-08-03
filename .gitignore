@@ -19,7 +19,7 @@
 .env.production.local
 .env
 
-src/Map/Map.js
+.src/Map/Map.js
 
 npm-debug.log*
 yarn-debug.log*
