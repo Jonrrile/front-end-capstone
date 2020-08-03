@@ -70,6 +70,15 @@
       "userId": 1,
       "date": "2020-08-25",
       "url": "https://www.usnews.com/dims4/USNEWS/c861844/2147483647/thumbnail/640x420/quality/85/?url=http%3A%2F%2Fcom-usnews-beam-media.s3.amazonaws.com%2F16%2F7e%2Fdb70a6cd4611b0f82e3bd4bf0cd8%2F1-intro-getty.jpg"
+    },
+    {
+      "id": "15",
+      "destination": "Ireland",
+      "description": "I bet a pub crawl in Ireland would be fun",
+      "userId": 1,
+      "url": "https://www.state.gov/wp-content/uploads/2018/11/Ireland-2109x1406.jpg",
+      "date": "2020-08-20",
+      "budget": "$3000"
     }
   ],
   "users": [

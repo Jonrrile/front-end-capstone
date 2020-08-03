@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import WishJourneyCard from './WishJourneyCard';
 import WishJourneyManager from '../../modules/WishJourneyManager'
 import { Button, Container,  CardColumns } from 'react-bootstrap'
+import Map from '../Map/Map'
 
 
 
@@ -33,6 +34,7 @@ const WishJourneyList = (props) => {
                     onClick={() => { props.history.push("/wishlist/new") }}>
                     Add to Wishlist!
                 </ Button> </h1>
+                <Map />
                  </div>
                 
             <Container>
