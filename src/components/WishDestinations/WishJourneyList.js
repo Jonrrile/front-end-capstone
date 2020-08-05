@@ -59,7 +59,7 @@ const WishJourneyList = (props) => {
             <Container>
                 <SimpleMap />
                 </Container>
-                <Footer />
+                <Footer className="footer" />
             </div>
            
         
