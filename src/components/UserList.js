@@ -28,7 +28,7 @@ const UserList = (props) => {
             {...props} />
                         
                          
-                        )
+                        
                     
                
             </div>

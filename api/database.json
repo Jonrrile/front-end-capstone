@@ -1,5 +1,46 @@
 {
-  "wishjourneys": [],
+  "wishjourneys": [
+    {
+      "destination": "Yosemite National Park",
+      "description": "Waterfalls, camping, and plenty of trails to reconnect with nature. ",
+      "budget": "$1700",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596658325/Yosemite.jpg",
+      "userId": 3,
+      "id": 1
+    },
+    {
+      "destination": "Japan",
+      "description": "Delicious food and plenty of beautiful landscapes await.",
+      "budget": "$3000",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596230528/Japan%20-%20flowers.jpg",
+      "userId": 3,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "destination": "Grand Canyon",
+      "description": "I would like to take a road trip out to Arizona to visit The Grand Canyon one day. ",
+      "userId": 3,
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596658252/Grand%20Canyon.jpg",
+      "budget": "$1800"
+    },
+    {
+      "destination": "Hawaii",
+      "description": "Who wouldn't want to visit Hawaii with the beautiful beaches. ",
+      "budget": "$4000",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596242391/Hawaii.jpg",
+      "userId": 3,
+      "id": 4
+    },
+    {
+      "id": 5,
+      "destination": "Alaska",
+      "description": "Probably my top wish list destination. I have always wondered where the best place to visit the Northern Lights would be. ",
+      "userId": 3,
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596658738/Northern%20Lights.jpg",
+      "budget": "$5000"
+    }
+  ],
   "plannedjourneys": [
     {
       "id": "15",
@@ -51,16 +92,10 @@
       "id": 2
     },
     {
-      "email": "Aaron@gmail.com",
-      "password": "123",
-      "user": "Aaron",
-      "id": 3
-    },
-    {
       "email": "Garret@gmail.com",
-      "password": "garrett",
+      "password": "123",
       "user": "Garrett",
-      "id": 4
+      "id": 3
     }
   ]
 }

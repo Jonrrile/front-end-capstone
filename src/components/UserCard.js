@@ -8,7 +8,7 @@ const UserCard = props => {
     <div>
 <Jumbotron fluid>
   <Container>
-    <h1>Welcome {props.user.user} </h1>
+    <h1 className="welcome">Welcome {props.user.user} </h1>
   </Container>
 </Jumbotron>
 </div>

@@ -1,3 +1,25 @@
+## Wanderlust 
+
+This app's purpose is to serve as a travel log/journal. Users can register, log in, and then view journeys in a wish list, planned, and completed view. An app to track destinations that the user has visited and wants to visit in the future. Entries can contain location, itinerary and or description, and a projected budget for the destinations that are being planned. 
+
+The user will be able to toggle their view to display destinations that have already been visited, those that are in the planning process, and those that are on a wish list for the future. Utilizing google maps api they can also see an interactive map that will pin their destinations. 
+
+
+## Concepts/Tools Used
+1. HTML 
+2. CSS
+3. JavaScript
+4. React Library
+5. Bootstrap for React
+6. Google Maps/Places API 
+7. Cloudinary 
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

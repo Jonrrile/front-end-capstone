@@ -19,7 +19,8 @@ const Home = () => {
       <img
         className="d-block w-100"
         src="https://images.unsplash.com/photo-1516503424803-708327384b90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1932&q=80"
-        />
+        height= "700px"
+        width="auto"/>
       <Carousel.Caption>
         <p>“Travel makes one modest, you see what a tiny place you occupy in the world"</p>
         <h3>- Gustave Flaubert</h3>
@@ -33,7 +34,7 @@ const Home = () => {
   
       <Carousel.Caption>
       <p>“Live with no excuses and travel with no regrets."</p>
-        <h3>- Osca Wilde</h3>
+        <h3>- Oscar Wilde</h3>
       </Carousel.Caption>
     </Carousel.Item>
     <Carousel.Item>
