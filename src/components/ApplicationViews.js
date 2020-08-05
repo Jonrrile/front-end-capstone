@@ -46,7 +46,7 @@ const ApplicationViews = (props) => {
         
     }}
       /> 
-
+    
       <Route exact path="/wishlist" render={(props) => {
       return <WishJourneyList {...props}/>
       

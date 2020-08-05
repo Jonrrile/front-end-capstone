@@ -1,20 +1,19 @@
 import React from "react";
+import UserList from './UserList'
 import { Jumbotron } from "react-bootstrap";
 import { Container } from "react-bootstrap";
 import { Image } from "react-bootstrap";
 import ReactDOM from 'react-dom';
 import Carousel from 'react-bootstrap/Carousel'
+import Footer from '../components/Footer/Footer'
 
 
 
 const Home = () => {
+ 
   return (
     <div>
-    <Jumbotron fluid>
-      <Container>
-        <h1>Welcome Traveler</h1>
-      </Container>
-    </Jumbotron>
+      <UserList />
     <Carousel className="home_carousel" >
     <Carousel.Item>
       <img

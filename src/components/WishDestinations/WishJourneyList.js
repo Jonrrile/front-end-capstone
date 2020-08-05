@@ -4,7 +4,7 @@ import WishJourneyManager from '../../modules/WishJourneyManager'
 import { Button, Container,  CardColumns } from 'react-bootstrap'
 import GoogleMapReact from 'google-map-react'
 import SimpleMap from '../Map/Map'
-
+import Footer from '../Footer/Footer'
 
 
 
@@ -59,7 +59,9 @@ const WishJourneyList = (props) => {
             <Container>
                 <SimpleMap />
                 </Container>
+                <Footer />
             </div>
+           
         
     );
 };

@@ -3,6 +3,7 @@ import PlannedJourneyCard from './PlannedJourneyCard';
 import PlannedJourneyManager from '../../modules/PlannedJourneyManager'
 import { Button, Container, CardColumns } from 'react-bootstrap';
 import SimpleMap from '../Map/Map'
+import Footer from '../Footer/Footer'
 
 const PlannedJourneyList = (props) => {
     const [plannedjourneys, setPlannedJourneys] = useState([]); //initial declaration utilizing state for empty array
@@ -53,6 +54,7 @@ const PlannedJourneyList = (props) => {
                       <Container>
                 <SimpleMap />
                 </Container>
+                <Footer />
                     </div>
     );
 };

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import NavBar from "./components/Nav/NavBar"
 import './App.css';
 import ApplicationViews from './components/ApplicationViews'
-import Footer from './components/Footer/Footer'
+
 
 
 
@@ -34,7 +34,7 @@ function App() {
         {/* <NavBar hasUser={hasUser} clearUser={clearUser} /> */}
         <ApplicationViews setHasUser={hasUser} setUser={setUser}/>
         </div>
-        <Footer />
+       
     
 
 
