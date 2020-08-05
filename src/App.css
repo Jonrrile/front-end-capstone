@@ -41,5 +41,21 @@
 
 
 .wish_list_header {
-    padding: 60px 0;
+    
+    text-align: center;
+}
+.wish_button {
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+}
+
+.search {
+    text-align: center;
+}
+
+.map_text {
+    text-align: center;
 }

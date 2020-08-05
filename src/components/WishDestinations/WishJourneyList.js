@@ -28,12 +28,17 @@ const WishJourneyList = (props) => {
 
     return (
         <div>
+            <div>
                  <div className="wish_list_header">
-                     <h1>Your Wish List: <Button variant="outline-primary" type="button"
+                     <h3>Current Wish List: </h3>
+                     </div>
+                     <div className="wish_button"> 
+                         <Button variant="outline-primary" type="button"
                     className="btn"
                     onClick={() => { props.history.push("/wishlist/new") }}>
                     Add to Wishlist!
-                </ Button> </h1>
+                </ Button> 
+                </div>
                  </div>
                 
             <Container>

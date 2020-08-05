@@ -24,7 +24,7 @@ import "@reach/combobox/styles.css";
 const libraries = ["places"];
 const mapContainerStyle = {
   height: "100vh",
-  width: "100vw",
+  width: "82vw",
 };
 const options = {
   // styles: mapStyles,
@@ -32,8 +32,8 @@ const options = {
   zoomControl: true,
 };
 const center = {
-  lat: 43.6532,
-  lng: -79.3832,
+  lat: 36.174465,
+  lng: -86.767960,
 };
 
 export default function SimpleMap() {
@@ -70,9 +70,9 @@ export default function SimpleMap() {
 
   return (
     <div>
-      <h1>
+      <h3 className="map_text">
         Journeys
-      </h1>
+      </h3>
 
       <Locate panTo={panTo} />
       <Search panTo={panTo} />
@@ -92,6 +92,7 @@ export default function SimpleMap() {
             position={{ lat: marker.lat, lng: marker.lng }}
             onClick={() => {
               setSelected(marker);
+              console.log(marker)
             }}
           />
         ))}
@@ -145,7 +146,7 @@ function Search({ panTo }) {
     clearSuggestions,
   } = usePlacesAutocomplete({
     requestOptions: {
-      location: { lat: () => 43.6532, lng: () => -79.3832 },
+      location: { lat: () => 36.174465, lng: () => -86.767960 },
       radius: 100 * 1000,
     },
   });
@@ -176,7 +177,7 @@ function Search({ panTo }) {
           value={value}
           onChange={handleInput}
           disabled={!ready}
-          placeholder="Search your location"
+          placeholder="Search"
         />
         <ComboboxPopover>
           <ComboboxList>

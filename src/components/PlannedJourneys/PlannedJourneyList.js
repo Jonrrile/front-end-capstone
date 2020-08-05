@@ -24,15 +24,18 @@ const PlannedJourneyList = (props) => {
 
     return (
         <div>
-           <div className="wish_list_header">
-               <h1>Your Planned Journeys: 
-                     <Button type="button"
-                   variant="outline-primary"
+           <div>
+                 <div className="wish_list_header">
+                     <h3>Current Planned Journeys: </h3>
+                     </div>
+                     <div className="wish_button"> 
+                         <Button variant="outline-primary" type="button"
+                    className="btn"
                     onClick={() => { props.history.push("/plannedjourneys/new") }}>
                     Add to Plans!
-                    </ Button>
-                    </h1>
-                    </div>
+                </ Button> 
+                </div>
+                 </div>
     
             <Container>
                 <CardColumns>
