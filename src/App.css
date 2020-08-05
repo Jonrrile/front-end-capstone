@@ -50,6 +50,8 @@
 
 .footer {
     text-align: center;
+    align-self: baseline;
+    align-content: flex-end;
 }
 
 .search {
@@ -58,4 +60,9 @@
 
 .map_text {
     text-align: center;
+}
+
+.home_carousel {
+    height: "100vh";
+    width: "82vw";
 }

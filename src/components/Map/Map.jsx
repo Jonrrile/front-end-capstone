@@ -74,7 +74,7 @@ export default function SimpleMap() {
         Journeys
       </h3>
 
-      <Locate panTo={panTo} />
+      
       <Search panTo={panTo} />
 
       <GoogleMap
@@ -116,26 +116,7 @@ export default function SimpleMap() {
   );
 }
 
-function Locate({ panTo }) {
-  return (
-    <button
-      className="locate"
-      onClick={() => {
-        navigator.geolocation.getCurrentPosition(
-          (position) => {
-            panTo({
-              lat: position.coords.latitude,
-              lng: position.coords.longitude,
-            });
-          },
-          () => null
-        );
-      }}
-    >
-      <img src="/compass.svg" alt="compass" />
-    </button>
-  );
-}
+
 
 function Search({ panTo }) {
   const {
