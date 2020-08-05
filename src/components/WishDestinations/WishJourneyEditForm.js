@@ -49,10 +49,9 @@ const WishJourneyEditForm = props => {
     };
 
     TransferJourneyManager.post(transferedWishJourney)
-        .then(() => props.history.push("/plannedjourneys"))
-        // .then(() => WishJourneyManager.delete(evt)
-        // .then(() => WishJourneyManager.getAll().then(setWishJourney)))
-        //trying to get it to delete it from the wishlist after sending to planned.
+        .then(() => TransferJourneyManager.deleteTransferedJourney(transferedWishJourney))
+         .then(() => props.history.push("/plannedjourneys"))
+        
     }
 
     useEffect(() => {

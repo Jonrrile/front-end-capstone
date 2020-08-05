@@ -11,8 +11,8 @@ post(transferedWishJourney) {
         body: JSON.stringify(transferedWishJourney)
     }).then(data => data.json())
 },
-deleteTransferedJourney(id) {
-    return fetch(`${remoteURL}/wishjourneys/${id}`, {
+deleteTransferedJourney(transferedWishJourney) {
+    return fetch(`${remoteURL}/wishjourneys/${transferedWishJourney.id}`, {
         method: "DELETE"
     }).then(result => result.json())
 },

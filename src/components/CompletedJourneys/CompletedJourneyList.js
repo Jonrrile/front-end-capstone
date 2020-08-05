@@ -23,15 +23,18 @@ const CompletedJourneyList = (props) => {
 
     return (
         <div>
-           <div className="wish_list_header">
-               <h1>Your Completed Journeys: 
-                     <Button type="button"
-                   variant="outline-primary"
+           <div>
+                 <div className="wish_list_header">
+                     <h3>Completed Journeys: </h3>
+                     </div>
+                     <div className="wish_button"> 
+                         <Button variant="outline-primary" type="button"
+                    className="btn"
                     onClick={() => { props.history.push("/completedjourneys/new") }}>
-                    Add to Plans!
-                    </ Button>
-                    </h1>
-                    </div>
+                    Document a Journey!
+                </ Button> 
+                </div>
+                 </div>
     
             <Container>
                 <CardColumns>

@@ -1,8 +1,10 @@
-.footer {
-    flex-shrink: 0;
-    text-align: center;
-    background-color: #f8f9fa;
-    color: rgba(0,0,0,.9);
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  }
-  
+.footer_container {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.icon {
+  display: flex;
+  justify-content: space-evenly;
+}

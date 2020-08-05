@@ -49,6 +49,7 @@ const PlannedJourneyEditForm = props => {
         };
     
         TransferPlannedManager.post(transferedPlannedJourney)
+        .then(() => TransferPlannedManager.delete(transferedPlannedJourney))
         .then(() => props.history.push("/completedjourneys"))
     
     }
