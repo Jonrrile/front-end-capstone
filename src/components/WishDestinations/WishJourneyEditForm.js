@@ -100,6 +100,16 @@ const WishJourneyEditForm = props => {
                             value={wishjourney.budget}
                         />
                         </FormGroup>
+                        <FormGroup>
+                        <Form.Label>Wishlist Picture</Form.Label>
+                        <FormControl
+                        type="text"
+                        required
+                        onChange={handleFieldChange}
+                        id="url"
+                        placeholder="Choose Image"
+                        />
+                        </FormGroup>
                         <Button
                             variant="outline-primary" 
                             type="button" disabled={isLoading}

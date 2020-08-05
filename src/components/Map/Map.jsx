@@ -71,7 +71,7 @@ export default function SimpleMap() {
   return (
     <div>
       <h3 className="map_text">
-        Journeys
+        Add Markers
       </h3>
 
       
@@ -106,7 +106,7 @@ export default function SimpleMap() {
           >
             <div>
               <h2>
-                New Journey
+                Marker
               </h2>
             </div>
           </InfoWindow>
