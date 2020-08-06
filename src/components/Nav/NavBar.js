@@ -27,7 +27,7 @@ const NavBar = props => {
           </Nav.Item>
           : null}
           {props.hasUser?
-          <NavDropdown title="Dropdown" id="nav-dropdown">
+          <NavDropdown title="Journeys" id="nav-dropdown">
             <NavDropdown.Item>
               <Link className="nav-link" to="/wishlist">Wish List</Link>
             </NavDropdown.Item>          

@@ -40,14 +40,14 @@ const PlannedJourneyForm = props => {
         />
         </FormGroup>
         <FormGroup>
-        <Form.Label>Itenerary</Form.Label>
+        <Form.Label>Itinerary</Form.Label>
         <FormControl
           as="textarea"
           rows="3"
           required
           onChange={handleFieldChange}
           id="description"
-          placeholder="Description or Itinerary"
+          placeholder="Description or itinerary"
         />
         </FormGroup>
         <FormGroup>
