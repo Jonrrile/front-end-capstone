@@ -10,10 +10,10 @@ post(transferedPlannedJourney) {
         },
         body: JSON.stringify(transferedPlannedJourney)
     }).then(data => data.json())
-},
-delete(transferedPlannedJourney) {
-    return fetch(`${remoteURL}/plannedjourneys/${transferedPlannedJourney.id}`, {
-        method: "DELETE"
-    }).then(result => result.json())
-},
+ },
+// delete(transferedPlannedJourney) {
+//     return fetch(`${remoteURL}/plannedjourneys/${transferedPlannedJourney.id}`, {
+//         method: "DELETE"
+//     }).then(result => result.json())
+// },
 }

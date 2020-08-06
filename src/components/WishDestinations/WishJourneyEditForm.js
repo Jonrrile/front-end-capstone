@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react"
 import WishJourneyManager from "../../modules/WishJourneyManager"
-import TransferJourneyManager from '../../modules/TransferJourneyManager'
 import { Button, FormGroup } from 'react-bootstrap';
 import { Form, FormControl } from 'react-bootstrap'
+import TransferJourneyManager from '../../modules/TransferJourneyManager'
+
 
 const WishJourneyEditForm = props => {
-    const [wishjourney, setWishJourney] = useState({ destination: "", description: "", userId: "", url: "", budget: ""});
+    const [wishjourney, setWishJourney] = useState({ destination: "", description: "", userId: "", date: "", url: "", budget: ""});
     const [isLoading, setIsLoading] = useState(false);
     
     const handleFieldChange = evt => {
@@ -25,6 +26,7 @@ const WishJourneyEditForm = props => {
         description: wishjourney.description,
         userId: wishjourney.userId = parseInt(sessionStorage.getItem("activeUser")),
         url: wishjourney.url,
+        date: wishjourney.date,
         budget: wishjourney.budget
     };
 
@@ -36,25 +38,24 @@ const WishJourneyEditForm = props => {
         evt.preventDefault()
         setIsLoading(true);
 
-       
-
-    // This is an edit, so we need the id
-    const transferedWishJourney = {
-        id: props.match.params.wishjourneyId,
-        destination: wishjourney.destination,
-        description: wishjourney.description,
-        userId: wishjourney.userId = parseInt(sessionStorage.getItem("activeUser")),
-        url: wishjourney.url,
-        budget: wishjourney.budget
-    };
-
-    TransferJourneyManager.post(transferedWishJourney)
-        .then(() => TransferJourneyManager.deleteTransferedJourney(transferedWishJourney))
-         .then(() => props.history.push("/plannedjourneys"))
+        const transferedJourney = {
+            // id: props.match.params.plannedjourneyId,
+            destination: wishjourney.destination,
+            description: wishjourney.description,
+            userId: wishjourney.userId = parseInt(sessionStorage.getItem("activeUser")),
+            url: wishjourney.url,
+            date: wishjourney.date,
+            budget: wishjourney.budget
+        };
         
+        console.log(transferedJourney);
+        TransferJourneyManager.post(transferedJourney)
+        // .then(() => TransferJourneyManager.delete(transferedJourney))
+        .then(() => props.history.push("/plannedjourneys"))
+    
     }
-
-    useEffect(() => {
+    
+        useEffect(() => {
         WishJourneyManager.get(props.match.params.wishjourneyId)
             .then(wishjourney => {
                 setWishJourney(wishjourney);
@@ -63,7 +64,6 @@ const WishJourneyEditForm = props => {
     }, []);
 
     return (
-        
         <div className="journey_form_container">
             <Form className="journey_form">
                 <FormGroup>
@@ -89,6 +89,7 @@ const WishJourneyEditForm = props => {
                             value={wishjourney.description}
                         />
                         </FormGroup>
+                        
                         <FormGroup>
                         <Form.Label>Budget</Form.Label>
                         <FormControl
@@ -99,16 +100,7 @@ const WishJourneyEditForm = props => {
                             id="budget"
                             value={wishjourney.budget}
                         />
-                        </FormGroup>
-                        <FormGroup>
-                        <Form.Label>Wishlist Picture</Form.Label>
-                        <FormControl
-                        type="text"
-                        required
-                        onChange={handleFieldChange}
-                        id="url"
-                        placeholder="Choose Image"
-                        />
+                      
                         </FormGroup>
                         <Button
                             variant="outline-primary" 
@@ -120,8 +112,9 @@ const WishJourneyEditForm = props => {
                             variant="outline-primary" 
                             type="button" disabled={isLoading}
                             onClick={transferJourney}
+                            >
                           
-                        >Move to Planned</Button>
+                        Move to Planned</Button>
                     </Form>
                 
             </div>

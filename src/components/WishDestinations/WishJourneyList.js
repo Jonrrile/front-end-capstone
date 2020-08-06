@@ -1,12 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import WishJourneyCard from './WishJourneyCard';
 import WishJourneyManager from '../../modules/WishJourneyManager'
-import { Button, Container,  CardColumns } from 'react-bootstrap'
-import GoogleMapReact from 'google-map-react'
+import { Button, Container, CardColumns } from 'react-bootstrap';
 import SimpleMap from '../Map/Map'
 import Footer from '../Footer/Footer'
-
-
 
 const WishJourneyList = (props) => {
     const [wishjourneys, setWishJourneys] = useState([]); //initial declaration utilizing state for empty array
@@ -28,9 +25,9 @@ const WishJourneyList = (props) => {
 
     return (
         <div>
-            <div>
+           <div>
                  <div className="wish_list_header">
-                     <h3>Current Wish List: </h3>
+                     <h3>Current Wishlist: </h3>
                      </div>
                      <div className="wish_button"> 
                          <Button variant="outline-primary" type="button"
@@ -40,29 +37,25 @@ const WishJourneyList = (props) => {
                 </ Button> 
                 </div>
                  </div>
-                
+    
             <Container>
-            <CardColumns>
+                <CardColumns>
                 {wishjourneys.map(wishjourney => {
-                   if (wishjourney.userId === parseInt(sessionStorage.getItem("activeUser"))) {
+                if (wishjourney.userId === parseInt(sessionStorage.getItem("activeUser"))) {
                     return (
                     <WishJourneyCard className="cards" key={wishjourney.id} wishjourney={wishjourney}
                         deleteJourney={deleteJourney}
                         {...props} />
-                        
-                         
                         )
                     }
                 })}
-            </CardColumns>
-            </Container>
-            <Container>
+                      </CardColumns>
+                      </Container>
+                      <Container>
                 <SimpleMap />
                 </Container>
-                <Footer className="footer" />
-            </div>
-           
-        
+                <Footer />
+                    </div>
     );
 };
 

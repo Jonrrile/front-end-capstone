@@ -47,7 +47,7 @@ const WishJourneyForm = props => {
           required
           onChange={handleFieldChange}
           id="description"
-          placeholder="Description or Itinerary"
+          placeholder="Description or itinerary"
         />
         </FormGroup>
         <FormGroup>

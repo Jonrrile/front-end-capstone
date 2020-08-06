@@ -1,101 +1,140 @@
 {
   "wishjourneys": [
     {
+      "destination": "Japan",
+      "description": "I would really like to see the cherry blossom festival",
+      "budget": "$3000",
+      "url": "https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/01/a0001976/img/basic/a0001976_main.jpg?20200707191911&q=80&rw=750&rh=536",
+      "userId": 4,
+      "id": 2
+    },
+    {
+      "destination": "Alaska",
+      "description": "To see The Northern Light",
+      "budget": "$1100",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596658738/Northern%20Lights.jpg",
+      "userId": 4,
+      "id": 3
+    },
+    {
       "destination": "Yosemite National Park",
-      "description": "Waterfalls, camping, and plenty of trails to reconnect with nature. ",
-      "budget": "$1700",
+      "description": "I want to knock out all of the National Parks",
+      "budget": "$1100",
       "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596658325/Yosemite.jpg",
-      "userId": 3,
+      "userId": 4,
+      "id": 4
+    },
+    {
+      "destination": "Space Needle Seattle WA",
+      "description": "Up there on my list of destinations ",
+      "budget": "$1100",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674264/Space%20Needle.jpg",
+      "userId": 4,
+      "id": 5
+    }
+  ],
+  "plannedjourneys": [
+    {
+      "destination": "Key West, Florida",
+      "description": "To see Ernest Hemingway's library and maybe do a little fishing. ",
+      "budget": "$1100",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596658912/Key%20West.jpg",
+      "date": "2020-11-14",
+      "userId": 4,
       "id": 1
     },
     {
-      "destination": "Japan",
-      "description": "Delicious food and plenty of beautiful landscapes await.",
-      "budget": "$3000",
-      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596230528/Japan%20-%20flowers.jpg",
-      "userId": 3,
+      "destination": "Mt. Leconte / Alum Cave Trail",
+      "description": "My brother and I want to do the 13 mile hike. ",
+      "budget": "$50",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674119/Mt.%20Leconte.jpg",
+      "date": "2020-08-07",
+      "userId": 4,
       "id": 2
     },
     {
       "id": 3,
       "destination": "Grand Canyon",
-      "description": "I would like to take a road trip out to Arizona to visit The Grand Canyon one day. ",
-      "userId": 3,
+      "description": "I would like to take a road trip out this way one day. ",
+      "userId": 4,
       "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596658252/Grand%20Canyon.jpg",
-      "budget": "$1800"
+      "budget": "$600"
     },
     {
-      "destination": "Hawaii",
-      "description": "Who wouldn't want to visit Hawaii with the beautiful beaches. ",
-      "budget": "$4000",
-      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596242391/Hawaii.jpg",
-      "userId": 3,
-      "id": 4
+      "id": 4,
+      "destination": "The Beach!!",
+      "description": "Going this weekend actually for a wedding!",
+      "userId": 4,
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596726405/Dolphins.jpg",
+      "date": "2020-08-08",
+      "budget": "$700"
     },
     {
-      "id": 5,
-      "destination": "Alaska",
-      "description": "Probably my top wish list destination. I have always wondered where the best place to visit the Northern Lights would be. ",
-      "userId": 3,
-      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596658738/Northern%20Lights.jpg",
-      "budget": "$5000"
-    }
-  ],
-  "plannedjourneys": [
-    {
-      "id": "15",
-      "destination": "Ireland",
-      "description": "I bet a pub crawl in Ireland would be fun",
-      "userId": 1,
-      "url": "https://www.state.gov/wp-content/uploads/2018/11/Ireland-2109x1406.jpg",
-      "budget": "$3000"
+      "destination": "Space Needle Seattle WA",
+      "description": "Up there on my list of destinations ",
+      "userId": 4,
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674264/Space%20Needle.jpg",
+      "budget": "$1100",
+      "id": 5
     }
   ],
   "completedjourneys": [
     {
-      "destination": "Florida",
-      "description": "Saw an alligator",
-      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596242391/Capstone/amazing-hawaii-beach-with-green-mountains_vqzixc.jpg",
-      "date": "2020-07-31",
-      "userId": 1,
+      "destination": "Ann Arbor, Michigan",
+      "description": "My dad and I went for our birthday last year. ",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674805/Ann%20Arbor.jpg",
+      "date": "2019-11-30",
+      "userId": 4,
       "id": 1
     },
     {
-      "id": "17",
-      "destination": "Japan",
-      "description": "It would be fun to experience the culture and the beautiful landscape",
-      "userId": 1,
-      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596230528/Capstone/5c49e6925241471b35591a04_dpgnmz.jpg",
-      "budget": "$5500"
+      "destination": "New York City",
+      "description": "My friends and I took an impromptu trip the summer after high school graduation",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596726947/https_3A_2F_2Fwww.history.com_2F.image_2FMTY1MTc1MTk3ODI0MDAxNjA5_2Ftopic-statue-of-liberty-gettyimages-960610006-promo_vyzvfu.jpg",
+      "date": "2012-05-01",
+      "userId": 4,
+      "id": 2
     },
     {
-      "id": "14",
-      "destination": "Alaska",
-      "description": "To see the northern lights",
-      "userId": 1,
-      "url": "https://www.usnews.com/dims4/USNEWS/c861844/2147483647/thumbnail/640x420/quality/85/?url=http%3A%2F%2Fcom-usnews-beam-media.s3.amazonaws.com%2F16%2F7e%2Fdb70a6cd4611b0f82e3bd4bf0cd8%2F1-intro-getty.jpg",
-      "date": "2020-08-21",
-      "budget": "expensive"
+      "destination": "The Beach!!",
+      "description": "Going this weekend actually for a wedding!",
+      "userId": 4,
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596726405/Dolphins.jpg",
+      "date": "2020-08-08",
+      "budget": "$700",
+      "id": 3
     }
   ],
   "users": [
     {
       "email": "test@gmail.com",
       "password": "test",
-      "user": "Jon",
+      "user": "Test",
       "id": 1
     },
     {
       "email": "jonrrile@ut.utm.edu",
       "password": "123",
       "user": "Jon",
-      "id": 2
+      "id": 3
     },
     {
       "email": "Garret@gmail.com",
       "password": "123",
       "user": "Garrett",
-      "id": 3
+      "id": 2
+    },
+    {
+      "email": "Jonathan@gmail.com",
+      "password": "12345",
+      "user": "Jonathan",
+      "id": 4
+    },
+    {
+      "email": "Sage@gmail.com",
+      "password": "1234",
+      "user": "Sage",
+      "id": 5
     }
   ]
 }

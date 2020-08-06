@@ -39,7 +39,6 @@ const PlannedJourneyEditForm = props => {
         setIsLoading(true);
 
         const transferedPlannedJourney = {
-            id: props.match.params.plannedjourneyId,
             destination: plannedjourney.destination,
             description: plannedjourney.description,
             userId: plannedjourney.userId = parseInt(sessionStorage.getItem("activeUser")),
@@ -49,7 +48,7 @@ const PlannedJourneyEditForm = props => {
         };
     
         TransferPlannedManager.post(transferedPlannedJourney)
-        .then(() => TransferPlannedManager.delete(transferedPlannedJourney))
+        // .then(() => TransferPlannedManager.delete(transferedPlannedJourney))
         .then(() => props.history.push("/completedjourneys"))
     
     }
