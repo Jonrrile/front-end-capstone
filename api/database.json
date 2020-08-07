@@ -9,12 +9,12 @@
       "id": 2
     },
     {
+      "id": 3,
       "destination": "Alaska",
       "description": "To see The Northern Light",
-      "budget": "$1100",
-      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596658738/Northern%20Lights.jpg",
       "userId": 4,
-      "id": 3
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596658738/Northern%20Lights.jpg",
+      "budget": "$1100"
     },
     {
       "destination": "Yosemite National Park",
@@ -23,14 +23,6 @@
       "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596658325/Yosemite.jpg",
       "userId": 4,
       "id": 4
-    },
-    {
-      "destination": "Space Needle Seattle WA",
-      "description": "Up there on my list of destinations ",
-      "budget": "$1100",
-      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674264/Space%20Needle.jpg",
-      "userId": 4,
-      "id": 5
     }
   ],
   "plannedjourneys": [
@@ -68,14 +60,6 @@
       "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596726405/Dolphins.jpg",
       "date": "2020-08-08",
       "budget": "$700"
-    },
-    {
-      "destination": "Space Needle Seattle WA",
-      "description": "Up there on my list of destinations ",
-      "userId": 4,
-      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674264/Space%20Needle.jpg",
-      "budget": "$1100",
-      "id": 5
     }
   ],
   "completedjourneys": [
@@ -94,15 +78,6 @@
       "date": "2012-05-01",
       "userId": 4,
       "id": 2
-    },
-    {
-      "destination": "The Beach!!",
-      "description": "Going this weekend actually for a wedding!",
-      "userId": 4,
-      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596726405/Dolphins.jpg",
-      "date": "2020-08-08",
-      "budget": "$700",
-      "id": 3
     }
   ],
   "users": [
@@ -135,6 +110,35 @@
       "password": "1234",
       "user": "Sage",
       "id": 5
+    }
+  ],
+  "blogs": [
+    {
+      "title": "No Bridge @ Burgess",
+      "text": "If you go to Burgess Falls be careful, the bridge to get down to the base of the waterfall is out and the only way is by canoe.",
+      "date": "2020-08-07",
+      "userId": 4,
+      "id": 1
+    }
+  ],
+  "pictures": [
+    {
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674805/Ann%20Arbor.jpg",
+      "caption": "Michigan Stadium, home of the Wolverines. Ann Arbor, Michigan.",
+      "userId": 4,
+      "id": 1
+    },
+    {
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674805/Ann%20Arbor.jpg",
+      "caption": "Michigan Stadium, home of the Wolverines. Ann Arbor, Michigan.",
+      "userId": 4,
+      "id": 1
+    },
+    {
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674805/Ann%20Arbor.jpg",
+      "caption": "Michigan Stadium, home of the Wolverines. Ann Arbor, Michigan.",
+      "userId": 4,
+      "id": 1
     }
   ]
 }
