@@ -23,6 +23,14 @@
       "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596658325/Yosemite.jpg",
       "userId": 4,
       "id": 4
+    },
+    {
+      "id": 5,
+      "destination": "Space Needle Seattle WA",
+      "description": "Never been to the Northwest but Id like to!",
+      "userId": 4,
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674264/Space%20Needle.jpg",
+      "budget": "$1000"
     }
   ],
   "plannedjourneys": [
@@ -60,6 +68,15 @@
       "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596726405/Dolphins.jpg",
       "date": "2020-08-08",
       "budget": "$700"
+    },
+    {
+      "id": 5,
+      "destination": "Space Needle Seattle WA",
+      "description": "Never been to the Northwest but Id like to!",
+      "userId": 4,
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674264/Space%20Needle.jpg",
+      "date": "2021-03-12",
+      "budget": "$1000"
     }
   ],
   "completedjourneys": [
@@ -78,6 +95,15 @@
       "date": "2012-05-01",
       "userId": 4,
       "id": 2
+    },
+    {
+      "destination": "Space Needle Seattle WA",
+      "description": "Never been to the Northwest but Id like to!",
+      "userId": 4,
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674264/Space%20Needle.jpg",
+      "date": "2021-03-12",
+      "budget": "$1000",
+      "id": 3
     }
   ],
   "users": [
@@ -110,35 +136,52 @@
       "password": "1234",
       "user": "Sage",
       "id": 5
+    },
+    {
+      "email": "Joe@gmail.com",
+      "password": "123",
+      "user": "Joe",
+      "id": 6
     }
   ],
   "blogs": [
     {
-      "title": "No Bridge @ Burgess",
-      "text": "If you go to Burgess Falls be careful, the bridge to get down to the base of the waterfall is out and the only way is by canoe.",
-      "date": "2020-08-07",
+      "title": "Sample",
+      "text": "Samplersougnarsouginaosiug",
+      "date": "",
       "userId": 4,
+      "timestamp": "10:02:48 PM",
       "id": 1
+    },
+    {
+      "title": "dsaosdgh",
+      "text": "oidshgoishg",
+      "date": "",
+      "userId": 4,
+      "timestamp": "8/11/2020",
+      "id": 2
+    },
+    {
+      "title": "Will sports return?",
+      "text": "fgpiajgoaisgj",
+      "date": "",
+      "userId": 4,
+      "timestamp": "8/12/2020",
+      "id": 3
     }
   ],
   "pictures": [
     {
-      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674805/Ann%20Arbor.jpg",
-      "caption": "Michigan Stadium, home of the Wolverines. Ann Arbor, Michigan.",
+      "caption": "The Northern Lights!",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596658738/Northern%20Lights.jpg",
       "userId": 4,
-      "id": 1
+      "id": 2
     },
     {
-      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674805/Ann%20Arbor.jpg",
-      "caption": "Michigan Stadium, home of the Wolverines. Ann Arbor, Michigan.",
+      "caption": "The Grand Canyons",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596658252/Grand%20Canyon.jpg",
       "userId": 4,
-      "id": 1
-    },
-    {
-      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674805/Ann%20Arbor.jpg",
-      "caption": "Michigan Stadium, home of the Wolverines. Ann Arbor, Michigan.",
-      "userId": 4,
-      "id": 1
+      "id": 3
     }
   ]
 }

@@ -1,26 +1,26 @@
 import React, { useState } from 'react';
-import BlogManager from '../../modules/BlogManager';
+import GalleryManager from '../../modules/GalleryManager';
 import { Form, FormGroup, FormControl, FormContent, FormFile } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 
-const BlogForm = props => {
-  const [blog, setBlog] = useState({ title: "", text: "",  date: "", userId: "", timestamp: new Date().toLocaleDateString()});
+const GalleryForm = props => {
+  const [picture, setPicture] = useState({ caption: "", url: "", userId: ""})
   const [isLoading, setIsLoading] = useState(false);
-  blog.userId = parseInt(sessionStorage.getItem("activeUser"))
+  picture.userId = parseInt(sessionStorage.getItem("activeUser"))
   const handleFieldChange = evt => {
-      const stateToChange = { ...blog};
+      const stateToChange = { ...picture};
       stateToChange[evt.target.id] = evt.target.value;
-      setBlog(stateToChange);
+      setPicture(stateToChange);
   };
 
-  const constructNewBlog = evt => {
+  const addNewPicture = evt => {
       evt.preventDefault();
-      if (blog.title === "" || blog.text === "") {
+      if (picture.caption === "" || picture.url === "") {
           window.alert("Please fill out all fields!");
       } else {
           setIsLoading(true);
-          BlogManager.post(blog)
-          .then(() => props.history.push("/blog"))
+          GalleryManager.post(picture)
+          .then(() => props.history.push("/gallery"))
       }
 
   };
@@ -29,24 +29,24 @@ const BlogForm = props => {
     <div className="journey_form_container">
    <Form className="journey_form">
   <FormGroup>
-    <Form.Label>Title</Form.Label>
+    <Form.Label>Image</Form.Label>
       <FormControl
-        type="text"
+        type="url"
         required
         onChange={handleFieldChange}
-        id="title"
-        placeholder="Title"
+        id="url"
+        placeholder="Select Image"
       />
       </FormGroup>
       <FormGroup>
-      <Form.Label>Blog</Form.Label>
+      <Form.Label>Caption</Form.Label>
       <FormControl
         as="textarea"
         rows="3"
         required
         onChange={handleFieldChange}
-        id="text"
-        placeholder="Blog"
+        id="caption"
+        placeholder="A Little About The Photo"
       />
       </FormGroup>
      
@@ -55,8 +55,8 @@ const BlogForm = props => {
         variant="outline-primary"
         type="submit"
         disabled={isLoading}
-        onClick={constructNewBlog}
-      >Blog!
+        onClick={addNewPicture}
+      >Upload!
       </Button>
     </Form>
     </div>
@@ -64,4 +64,4 @@ const BlogForm = props => {
 );
 };
 
-export default BlogForm
+export default GalleryForm

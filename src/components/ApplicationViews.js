@@ -15,6 +15,7 @@ import PlannedJourneyEditForm from "./PlannedJourneys/PlannedJourneyEditForm"
 import BlogList from "./Blog/BlogList"
 import BlogForm from "./Blog/BlogForm"
 import GalleryList from "./Gallery/GalleryList"
+import GalleryForm from "./Gallery/GalleryForm"
 //const hasUser = () => sessionStorage.getItem("credentials") !== null;
 
 const ApplicationViews = (props) => {
@@ -103,9 +104,12 @@ const ApplicationViews = (props) => {
       <Route path="/blogs/new" render={(props) => {
         return <BlogForm {...props} />
       }} />
-      <Route exact path="gallery" render={(props) => {
+      <Route exact path="/gallery" render={(props) => {
         return <GalleryList {...props} />
 
+      }} />
+       <Route path="/pictures/new" render={(props) => {
+        return <GalleryForm {...props} />
       }} />
       
   

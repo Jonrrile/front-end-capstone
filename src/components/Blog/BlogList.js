@@ -3,6 +3,7 @@ import BlogCard from './BlogCard';
 import BlogManager from '../../modules/BlogManager'
 import { Button, Container, CardColumns } from 'react-bootstrap';
 import Footer from '../Footer/Footer'
+import Timestamp from 'react-timestamp' 
 
 
 const BlogList = (props) => {
@@ -48,6 +49,7 @@ const BlogList = (props) => {
                     onClick={() => { props.history.push("/blogs/new") }}>
                    Post to Blog
                 </ Button> 
+                
                 </div>
                      
                      

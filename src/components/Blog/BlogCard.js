@@ -3,7 +3,9 @@ import { Link } from "react-router-dom"
 import { Card } from 'react-bootstrap'
 import { CardDeck} from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
+import Timestamp from 'react-timestamp';
 
+const credentials =  sessionStorage.getItem("credentials")
 
 const BlogCard = props => {
     return (
@@ -13,7 +15,8 @@ const BlogCard = props => {
                 <blockquote className="blockquote mb-0">
                     <p>{' '} {props.blog.text} {' '}</p>
                     <footer className="blockquote-footer">
-                        {props.blog.date}
+                        {props.blog.timestamp} 
+                        {credentials.user}
                     </footer>
                     </blockquote>  
                 <Button className="btn" variant="outline-primary" type="button" onClick={() => props.deleteBlog(props.blog.id)}>Delete</ Button>

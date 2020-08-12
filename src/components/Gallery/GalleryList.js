@@ -29,11 +29,12 @@ const GalleryList = (props) => {
                  
                     
                  
-    
+           <Container>
                
                 {pictures.map(picture => {
                 if (picture.userId === parseInt(sessionStorage.getItem("activeUser"))) {
                     return (
+                        
                     <GalleryCard className="cards" key={picture.id} picture={picture}
                         deletePicture={deletePicture}
                         {...props} />
@@ -41,7 +42,7 @@ const GalleryList = (props) => {
                         )
                     }
                 })}
-
+                </Container>
                 <div className="wish_button"> 
                          <Button variant="outline-primary" type="button"
                     className="btn"
@@ -53,7 +54,7 @@ const GalleryList = (props) => {
                      
                
                 <Footer />
-                    </div>
+                   </div> 
     );
 };
 

@@ -10,15 +10,15 @@ const GalleryCard = props => {
     return (
         <Figure>
   <Figure.Image
-    width={171}
-    height={180}
+    width={300}
+    height={500}
     alt="171x180"
     src={props.picture.url}
   />
-  <p>Test</p>
   <Figure.Caption>
     {props.picture.caption}
   </Figure.Caption>
+  <Button className="btn" variant="outline-primary" type="button" onClick={() => props.deletePicture(props.picture.id)}>Delete</ Button>
 </Figure>
     )
 }
