@@ -4,7 +4,7 @@ import { Form, FormGroup, FormControl, FormContent, FormFile } from "react-boots
 import { Button } from "react-bootstrap";
 
 const BlogForm = props => {
-  const [blog, setBlog] = useState({ title: "", text: "",  date: "", userId: "", timestamp: new Date().toLocaleDateString()});
+  const [blog, setBlog] = useState({ title: "", text: "",  date: "", userId: "", url: "", timestamp: new Date().toLocaleDateString()});
   const [isLoading, setIsLoading] = useState(false);
   blog.userId = parseInt(sessionStorage.getItem("activeUser"))
   const handleFieldChange = evt => {
@@ -38,15 +38,25 @@ const BlogForm = props => {
         placeholder="Title"
       />
       </FormGroup>
+  <FormGroup>
+    <Form.Label>Article link</Form.Label>
+      <FormControl
+        type="url"
+        required
+        onChange={handleFieldChange}
+        id="url"
+        placeholder="Article Link (optional)"
+      />
+      </FormGroup>
       <FormGroup>
-      <Form.Label>Blog</Form.Label>
+      <Form.Label>Content</Form.Label>
       <FormControl
         as="textarea"
         rows="3"
         required
         onChange={handleFieldChange}
         id="text"
-        placeholder="Blog"
+        placeholder="Enter your blog"
       />
       </FormGroup>
      

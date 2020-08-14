@@ -81,14 +81,6 @@
   ],
   "completedjourneys": [
     {
-      "destination": "Ann Arbor, Michigan",
-      "description": "My dad and I went for our birthday last year. ",
-      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674805/Ann%20Arbor.jpg",
-      "date": "2019-11-30",
-      "userId": 4,
-      "id": 1
-    },
-    {
       "destination": "New York City",
       "description": "My friends and I took an impromptu trip the summer after high school graduation",
       "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596726947/https_3A_2F_2Fwww.history.com_2F.image_2FMTY1MTc1MTk3ODI0MDAxNjA5_2Ftopic-statue-of-liberty-gettyimages-960610006-promo_vyzvfu.jpg",
@@ -104,6 +96,14 @@
       "date": "2021-03-12",
       "budget": "$1000",
       "id": 3
+    },
+    {
+      "destination": "Ann Arbor Michigan",
+      "description": "Me and dad went to see a game last year",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674805/Ann%20Arbor.jpg",
+      "date": "2019-11-30",
+      "userId": 4,
+      "id": 4
     }
   ],
   "users": [
@@ -146,28 +146,38 @@
   ],
   "blogs": [
     {
+      "id": 1,
       "title": "Sample",
-      "text": "Samplersougnarsouginaosiug",
-      "date": "",
+      "url": "",
       "userId": 4,
-      "timestamp": "10:02:48 PM",
-      "id": 1
+      "text": "Try again"
     },
     {
-      "title": "dsaosdgh",
-      "text": "oidshgoishg",
+      "title": "Sample",
+      "text": "dfafspdigj",
       "date": "",
       "userId": 4,
-      "timestamp": "8/11/2020",
+      "url": "",
+      "timestamp": "8/14/2020",
       "id": 2
     },
     {
-      "title": "Will sports return?",
-      "text": "fgpiajgoaisgj",
+      "title": "Sample",
+      "text": "dfasdf",
       "date": "",
       "userId": 4,
-      "timestamp": "8/12/2020",
+      "url": "",
+      "timestamp": "8/14/2020",
       "id": 3
+    },
+    {
+      "title": "Will sports return?",
+      "text": "efsdfdsfdsf",
+      "date": "",
+      "userId": 4,
+      "url": "",
+      "timestamp": "8/14/2020",
+      "id": 4
     }
   ],
   "pictures": [

@@ -5,18 +5,20 @@ import { CardDeck} from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
 import Timestamp from 'react-timestamp';
 
-const credentials =  sessionStorage.getItem("credentials")
+let username = sessionStorage.getItem("credentials")
+    username = JSON.parse(username);
+    console.log(username.user)
 
 const BlogCard = props => {
     return (
         <Card >
-            <Card.Header>{props.blog.title}</Card.Header>
+            <Card.Header><a href={props.blog.url}>{props.blog.title}</a></Card.Header>
             <Card.Body>
                 <blockquote className="blockquote mb-0">
                     <p>{' '} {props.blog.text} {' '}</p>
                     <footer className="blockquote-footer">
-                        {props.blog.timestamp} 
-                        {credentials.user}
+                        Posted by {username.user} on {props.blog.timestamp} 
+                        
                     </footer>
                     </blockquote>  
                 <Button className="btn" variant="outline-primary" type="button" onClick={() => props.deleteBlog(props.blog.id)}>Delete</ Button>

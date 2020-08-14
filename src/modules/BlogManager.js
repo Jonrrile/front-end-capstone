@@ -21,5 +21,14 @@ post(blog) {
         body: JSON.stringify(blog)
     }).then(data => data.json())
 },
+update(editedBlog) {
+  return fetch(`${remoteURL}/blogs/${editedBlog.id}`, {
+      method: "PUT",
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify(editedBlog)
+  }).then(data => data.json());
+}
 
 }

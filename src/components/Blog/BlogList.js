@@ -8,7 +8,7 @@ import Timestamp from 'react-timestamp'
 
 const BlogList = (props) => {
     const [blogs, setBlogs] = useState([]); 
-
+    
     const getBlogs = () => {
         return BlogManager.getAll().then(blogsFromAPI => {
             setBlogs(blogsFromAPI) //fetch call from API
