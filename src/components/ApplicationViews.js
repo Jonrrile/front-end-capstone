@@ -12,6 +12,11 @@ import Login from "./Login/Login"
 import Register from "./Login/Register"
 import WishJourneyEditForm from "./WishDestinations/WishJourneyEditForm"
 import PlannedJourneyEditForm from "./PlannedJourneys/PlannedJourneyEditForm"
+import BlogList from "./Blog/BlogList"
+import BlogForm from "./Blog/BlogForm"
+import GalleryList from "./Gallery/GalleryList"
+import GalleryForm from "./Gallery/GalleryForm"
+import BlogEditForm from "./Blog/BlogEditForm"
 //const hasUser = () => sessionStorage.getItem("credentials") !== null;
 
 const ApplicationViews = (props) => {
@@ -94,6 +99,28 @@ const ApplicationViews = (props) => {
           
           
         }} />
+         <Route exact path="/blog" render={(props) => {
+      return <BlogList {...props}/>
+    }} />
+      <Route path="/blogs/new" render={(props) => {
+        return <BlogForm {...props} />
+      }} />
+       <Route
+        path="/blogs/:blogId(\d+)/edit"
+        render={props => {
+            return <BlogEditForm {...props} />
+          
+          
+        }} />
+      <Route exact path="/gallery" render={(props) => {
+        return <GalleryList {...props} />
+
+      }} />
+       <Route path="/pictures/new" render={(props) => {
+        return <GalleryForm {...props} />
+      }} />
+      
+  
       
     </React.Fragment>
   );

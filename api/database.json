@@ -9,12 +9,12 @@
       "id": 2
     },
     {
+      "id": 3,
       "destination": "Alaska",
       "description": "To see The Northern Light",
-      "budget": "$1100",
-      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596658738/Northern%20Lights.jpg",
       "userId": 4,
-      "id": 3
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596658738/Northern%20Lights.jpg",
+      "budget": "$1100"
     },
     {
       "destination": "Yosemite National Park",
@@ -25,12 +25,12 @@
       "id": 4
     },
     {
+      "id": 5,
       "destination": "Space Needle Seattle WA",
-      "description": "Up there on my list of destinations ",
-      "budget": "$1100",
-      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674264/Space%20Needle.jpg",
+      "description": "Never been to the Northwest but Id like to!",
       "userId": 4,
-      "id": 5
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674264/Space%20Needle.jpg",
+      "budget": "$1000"
     }
   ],
   "plannedjourneys": [
@@ -70,23 +70,16 @@
       "budget": "$700"
     },
     {
+      "id": 5,
       "destination": "Space Needle Seattle WA",
-      "description": "Up there on my list of destinations ",
+      "description": "Never been to the Northwest but Id like to!",
       "userId": 4,
       "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674264/Space%20Needle.jpg",
-      "budget": "$1100",
-      "id": 5
+      "date": "2021-03-12",
+      "budget": "$1000"
     }
   ],
   "completedjourneys": [
-    {
-      "destination": "Ann Arbor, Michigan",
-      "description": "My dad and I went for our birthday last year. ",
-      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674805/Ann%20Arbor.jpg",
-      "date": "2019-11-30",
-      "userId": 4,
-      "id": 1
-    },
     {
       "destination": "New York City",
       "description": "My friends and I took an impromptu trip the summer after high school graduation",
@@ -96,13 +89,21 @@
       "id": 2
     },
     {
-      "destination": "The Beach!!",
-      "description": "Going this weekend actually for a wedding!",
+      "destination": "Space Needle Seattle WA",
+      "description": "Never been to the Northwest but Id like to!",
       "userId": 4,
-      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596726405/Dolphins.jpg",
-      "date": "2020-08-08",
-      "budget": "$700",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674264/Space%20Needle.jpg",
+      "date": "2021-03-12",
+      "budget": "$1000",
       "id": 3
+    },
+    {
+      "destination": "Ann Arbor Michigan",
+      "description": "Me and dad went to see a game last year",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674805/Ann%20Arbor.jpg",
+      "date": "2019-11-30",
+      "userId": 4,
+      "id": 4
     }
   ],
   "users": [
@@ -135,6 +136,62 @@
       "password": "1234",
       "user": "Sage",
       "id": 5
+    },
+    {
+      "email": "Joe@gmail.com",
+      "password": "123",
+      "user": "Joe",
+      "id": 6
+    }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Sample",
+      "url": "",
+      "userId": 4,
+      "text": "Try again"
+    },
+    {
+      "title": "Sample",
+      "text": "dfafspdigj",
+      "date": "",
+      "userId": 4,
+      "url": "",
+      "timestamp": "8/14/2020",
+      "id": 2
+    },
+    {
+      "title": "Sample",
+      "text": "dfasdf",
+      "date": "",
+      "userId": 4,
+      "url": "",
+      "timestamp": "8/14/2020",
+      "id": 3
+    },
+    {
+      "title": "Will sports return?",
+      "text": "efsdfdsfdsf",
+      "date": "",
+      "userId": 4,
+      "url": "",
+      "timestamp": "8/14/2020",
+      "id": 4
+    }
+  ],
+  "pictures": [
+    {
+      "caption": "The Northern Lights!",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596658738/Northern%20Lights.jpg",
+      "userId": 4,
+      "id": 2
+    },
+    {
+      "caption": "The Grand Canyons",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596658252/Grand%20Canyon.jpg",
+      "userId": 4,
+      "id": 3
     }
   ]
 }

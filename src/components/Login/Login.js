@@ -1,8 +1,9 @@
 import React, { useState } from "react"
 import UserManager from "./../../modules/UserManager"
 import { Link } from "react-router-dom";
-import {Button, FormGroup, FormControl } from "react-bootstrap";
+import {Button, FormGroup, FormControl, Container } from "react-bootstrap";
 import "./Login.css"
+import MyComponent from "../globe/Globe";
 
 const userName = ""
 const password = ""
@@ -47,6 +48,7 @@ const Login = props => {
   We can adjust the visualization and functionality as needed */
 
   return (
+    
     <div className="Login">
       <form className="login_form" onSubmit={tryLogin}>
         <FormGroup controlId="username" bsSize="large">
@@ -71,6 +73,9 @@ const Login = props => {
           <Button block bsSize="large" type="submit">Sign in</Button>
           <div className="register">New user? &nbsp;
           <Link to="/register"> Register a new account </Link>
+          <Container>
+          <MyComponent />
+          </Container>
           </div>
           </form>
     </div>
