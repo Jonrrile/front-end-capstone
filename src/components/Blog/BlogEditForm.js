@@ -3,9 +3,14 @@ import BlogManager from "../../modules/BlogManager"
 import { Button, FormGroup, Form, FormControl } from 'react-bootstrap';
 
 const BlogEditForm = props => {
-    const [blog, setBlog] = useState({ title: "", text: "",  userId: "", url: "", timestamp: new Date().toLocaleDateString()});
+    const [blog, setBlog] = useState({ title: "", text: "",  userId: "", url: "", username: "", timestamp: new Date().toLocaleDateString()});
     const [isLoading, setIsLoading] = useState(false);
     
+
+    let user = sessionStorage.getItem("credentials")
+    user = JSON.parse(user)
+    blog.username = user.user
+
     const handleFieldChange = evt => {
         const stateToChange = { ...blog };
         stateToChange[evt.target.id] = evt.target.value;
@@ -23,7 +28,8 @@ const BlogEditForm = props => {
         url: blog.url,
         userId: blog.userId = parseInt(sessionStorage.getItem("activeUser")),
         text: blog.text,
-        timestamp: blog.timestamp
+        timestamp: blog.timestamp,
+        username: blog.username
     };
 
     BlogManager.update(editedBlog)
@@ -48,7 +54,7 @@ const BlogEditForm = props => {
             required
             onChange={handleFieldChange}
             id="title"
-            placeholder="Title"
+            value={blog.title}
           />
           </FormGroup>
       <FormGroup>
@@ -58,7 +64,7 @@ const BlogEditForm = props => {
             required
             onChange={handleFieldChange}
             id="url"
-            placeholder="Article Link (optional)"
+            value={blog.url}
           />
           </FormGroup>
           <FormGroup>
@@ -69,7 +75,7 @@ const BlogEditForm = props => {
             required
             onChange={handleFieldChange}
             id="text"
-            placeholder="Enter your blog"
+            value={blog.text}
           />
           </FormGroup>
          

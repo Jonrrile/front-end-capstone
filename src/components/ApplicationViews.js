@@ -120,7 +120,7 @@ const ApplicationViews = (props) => {
         return <GalleryList {...props} />
 
       }} />
-       <Route path="/pictures/new" render={(props) => {
+       <Route path="/gallery/new" render={(props) => {
         return <GalleryForm {...props} />
       }} />
       

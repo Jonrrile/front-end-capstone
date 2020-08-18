@@ -11,7 +11,7 @@
     {
       "id": 3,
       "destination": "Alaska",
-      "description": "To see The Northern Light",
+      "description": "Probably my number 1 bucket list trip. Who wouldn't want to see this phenomenon. ",
       "userId": 4,
       "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596658738/Northern%20Lights.jpg",
       "budget": "$1100"
@@ -25,12 +25,28 @@
       "id": 4
     },
     {
-      "id": 5,
-      "destination": "Space Needle Seattle WA",
-      "description": "Never been to the Northwest but Id like to!",
+      "destination": "Oktoberfest",
+      "description": "Probably a bad idea now but once things get under control it would be a fun trip",
+      "budget": "$1700",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1597716556/Oktoberfest.jpg",
       "userId": 4,
-      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674264/Space%20Needle.jpg",
-      "budget": "$1000"
+      "id": 5
+    },
+    {
+      "destination": "Spain",
+      "description": "I would like to visit Spain. Both to see the beautiful architecture and to experience the culture and ambiance. ",
+      "budget": "$3000",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1597723848/fbd4nzvn5qhwjlkef5lg.jpg",
+      "userId": 4,
+      "id": 6
+    },
+    {
+      "destination": "Ireland",
+      "description": "I love medieval architecture. Visiting Ireland is definitely up towards the top of my list. ",
+      "budget": "$2200",
+      "url": "https://www.roadaffair.com/wp-content/uploads/2017/12/rock-of-cashel-castle-ireland-shutterstock_750976849.jpg",
+      "userId": 4,
+      "id": 7
     }
   ],
   "plannedjourneys": [
@@ -58,16 +74,8 @@
       "description": "I would like to take a road trip out this way one day. ",
       "userId": 4,
       "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596658252/Grand%20Canyon.jpg",
+      "date": "2021-03-15",
       "budget": "$600"
-    },
-    {
-      "id": 4,
-      "destination": "The Beach!!",
-      "description": "Going this weekend actually for a wedding!",
-      "userId": 4,
-      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596726405/Dolphins.jpg",
-      "date": "2020-08-08",
-      "budget": "$700"
     },
     {
       "id": 5,
@@ -77,6 +85,15 @@
       "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674264/Space%20Needle.jpg",
       "date": "2021-03-12",
       "budget": "$1000"
+    },
+    {
+      "destination": "Oregon",
+      "description": "My brother and I wanted to visit for his graduation celebration but it was postponed. We still plan to go at some point. ",
+      "budget": "$1700",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1597716887/Oregon.jpg",
+      "date": "2020-08-29",
+      "userId": 4,
+      "id": 7
     }
   ],
   "completedjourneys": [
@@ -89,21 +106,44 @@
       "id": 2
     },
     {
-      "destination": "Space Needle Seattle WA",
-      "description": "Never been to the Northwest but Id like to!",
-      "userId": 4,
-      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674264/Space%20Needle.jpg",
-      "date": "2021-03-12",
-      "budget": "$1000",
-      "id": 3
-    },
-    {
       "destination": "Ann Arbor Michigan",
       "description": "Me and dad went to see a game last year",
       "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674805/Ann%20Arbor.jpg",
       "date": "2019-11-30",
       "userId": 4,
       "id": 4
+    },
+    {
+      "id": 6,
+      "destination": "Nassau",
+      "description": "My family and I went a few years ago. Red Stripe beers are better on the beach. ",
+      "userId": 4,
+      "date": "2016-04-01",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1597717161/Hilton_resort_and_waterfront_Nassau_Bahamas_2020_s5mkxv.jpg"
+    },
+    {
+      "destination": "Burgess Falls / Window's Cliff",
+      "description": "We went on a 8 mile hike to see the 4 waterfalls",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/c_scale,h_2729,q_100/v1597723019/IMG_0423_e1cien.jpg",
+      "date": "2020-05-01",
+      "userId": 4,
+      "id": 7
+    },
+    {
+      "destination": "Boston, MA ",
+      "description": "One of the first vacations that I remember taking. My family took a trip there when I was a kid and I remember seeing the Boston Harbor. ",
+      "url": "https://www.bostonteapartyship.com/wp-content/uploads/2019/11/boston-tea-party-museum.jpg",
+      "date": "2000-01-01",
+      "userId": 4,
+      "id": 8
+    },
+    {
+      "destination": "Saint Louis",
+      "description": "We did a lot in Saint Louis but my favorite memory was convincing my brother to ride the roller coasters",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1597723736/eqhvocsw5ruzj79k9zfx.jpg",
+      "date": "2012-05-05",
+      "userId": 4,
+      "id": 9
     }
   ],
   "users": [
@@ -152,16 +192,6 @@
   ],
   "blogs": [
     {
-      "title": "No Bridge @ Burgess",
-      "text": "Careful if you go to Burgess Falls. The bridge down to the base is out and the only way to get down to is by Kayak.",
-      "date": "",
-      "userId": 4,
-      "url": "",
-      "username": "Jonathan",
-      "timestamp": "8/17/2020",
-      "id": 2
-    },
-    {
       "title": "Will Carnival ships sail again in 2020? ",
       "text": "Check out this article regarding Carnival's plan for 2020 & 2021.",
       "userId": 2,
@@ -180,11 +210,12 @@
       "id": 4
     },
     {
-      "title": "Top 10 Meteor Hot Spots",
-      "text": "Keeping track of this for the next meteor shower. ",
-      "userId": 7,
-      "url": "https://www.accuweather.com/en/travel/the-top-10-places-to-see-meteor-showers-in-the-us/650525",
-      "username": "Aaron",
+      "title": "Bridge out at Burgess",
+      "text": "Just a heads up the bridge to get down to the base of Burgess is currently damaged and you won't be able to get down there. ",
+      "date": "",
+      "userId": 4,
+      "username": "Jonathan",
+      "url": "",
       "timestamp": "8/17/2020",
       "id": 5
     }
@@ -200,9 +231,23 @@
     {
       "caption": "Dolphins",
       "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596726405/Dolphins.jpg",
+      "userId": 2,
+      "username": "Garrett",
+      "id": 3
+    },
+    {
+      "caption": "Adding this one to my list in the future!",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596230528/Japan%20-%20flowers.jpg",
+      "userId": 7,
+      "username": "Aaron",
+      "id": 4
+    },
+    {
+      "caption": "My dad and I at Ann Arbor",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1597723020/IMG_5738_yepsma.jpg",
       "userId": 4,
       "username": "Jonathan",
-      "id": 3
+      "id": 5
     }
   ]
 }
