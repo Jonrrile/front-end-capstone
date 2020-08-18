@@ -4,9 +4,14 @@ import { Form, FormGroup, FormControl, FormContent, FormFile } from "react-boots
 import { Button } from "react-bootstrap";
 
 const GalleryForm = props => {
-  const [picture, setPicture] = useState({ caption: "", url: "", userId: ""})
+  const [picture, setPicture] = useState({ caption: "", url: "", userId: "", username: ""})
   const [isLoading, setIsLoading] = useState(false);
   picture.userId = parseInt(sessionStorage.getItem("activeUser"))
+
+  let user = sessionStorage.getItem("credentials")
+  user = JSON.parse(user)
+  picture.username = user.user
+
   const handleFieldChange = evt => {
       const stateToChange = { ...picture};
       stateToChange[evt.target.id] = evt.target.value;

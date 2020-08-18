@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import UserManager from "./../../modules/UserManager"
 import { FormControl, FormGroup } from "react-bootstrap";
-import { Button } from "react-bootstrap";
+import { Button, Image } from "react-bootstrap";
 import "./Login.css"
 
 const Register = props => {
@@ -70,6 +70,10 @@ const handleRegister = evt => {
           </FormGroup>
 
           <Button block bsSize="large" type="submit">Create Account</ Button>
+          <Image
+          src="https://document-export.canva.com/DAEFMQSBPPI/1/thumbnail/0001-9735005906.png"
+          width={315}
+          height={290} />
       </form>
     </div>
   );

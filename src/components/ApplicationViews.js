@@ -99,9 +99,13 @@ const ApplicationViews = (props) => {
           
           
         }} />
-         <Route exact path="/blog" render={(props) => {
-      return <BlogList {...props}/>
-    }} />
+        <Route
+        exact path="/blog"
+        render={props => {
+          
+            return <BlogList {...props}
+            />
+        }} />
       <Route path="/blogs/new" render={(props) => {
         return <BlogForm {...props} />
       }} />

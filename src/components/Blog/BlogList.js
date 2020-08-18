@@ -33,14 +33,13 @@ const BlogList = (props) => {
     
                
                 {blogs.map(blog => {
-                if (blog.userId === parseInt(sessionStorage.getItem("activeUser"))) {
                     return (
                     <BlogCard className="cards" key={blog.id} blog={blog}
                         deleteBlog={deleteBlog}
                         {...props} />
                         
                         )
-                    }
+                    
                 })}
 
                 <div className="wish_button"> 

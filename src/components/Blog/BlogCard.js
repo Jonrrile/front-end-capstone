@@ -5,9 +5,6 @@ import { CardDeck} from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
 import Timestamp from 'react-timestamp';
 
-let username = sessionStorage.getItem("credentials")
-    username = JSON.parse(username);
-    console.log(username.user)
 
 const BlogCard = props => {
     return (
@@ -17,7 +14,7 @@ const BlogCard = props => {
                 <blockquote className="blockquote mb-0">
                     <p>{' '} {props.blog.text} {' '}</p>
                     <footer className="blockquote-footer">
-                        Posted by {username.user} on {props.blog.timestamp} 
+                        Posted by {props.blog.username} on {props.blog.timestamp} 
                         
                     </footer>
                     </blockquote>  

@@ -4,8 +4,13 @@ import { Form, FormGroup, FormControl, FormContent, FormFile } from "react-boots
 import { Button } from "react-bootstrap";
 
 const BlogForm = props => {
-  const [blog, setBlog] = useState({ title: "", text: "",  date: "", userId: "", url: "", timestamp: new Date().toLocaleDateString()});
+  const [blog, setBlog] = useState({ title: "", text: "",  date: "", userId: "", username: "", url: "", timestamp: new Date().toLocaleDateString()});
   const [isLoading, setIsLoading] = useState(false);
+
+  let user = sessionStorage.getItem("credentials")
+  user = JSON.parse(user)
+  blog.username = user.user
+
   blog.userId = parseInt(sessionStorage.getItem("activeUser"))
   const handleFieldChange = evt => {
       const stateToChange = { ...blog};
