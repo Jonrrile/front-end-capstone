@@ -47,6 +47,14 @@
       "url": "https://www.roadaffair.com/wp-content/uploads/2017/12/rock-of-cashel-castle-ireland-shutterstock_750976849.jpg",
       "userId": 4,
       "id": 7
+    },
+    {
+      "destination": "Mt. Leconte / Alum Cave Trail",
+      "description": "My brother and I want to hike the 22 mile trail",
+      "budget": "$40",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674119/Mt.%20Leconte.jpg",
+      "userId": 4,
+      "id": 8
     }
   ],
   "plannedjourneys": [
@@ -58,15 +66,6 @@
       "date": "2020-11-14",
       "userId": 4,
       "id": 1
-    },
-    {
-      "destination": "Mt. Leconte / Alum Cave Trail",
-      "description": "My brother and I want to do the 13 mile hike. ",
-      "budget": "$50",
-      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674119/Mt.%20Leconte.jpg",
-      "date": "2020-08-07",
-      "userId": 4,
-      "id": 2
     },
     {
       "id": 3,
@@ -94,6 +93,15 @@
       "date": "2020-08-29",
       "userId": 4,
       "id": 7
+    },
+    {
+      "id": 8,
+      "destination": "Mt. Leconte / Alum Cave Trail",
+      "description": "My brother and I want to hike the 22 mile trail",
+      "userId": 4,
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674119/Mt.%20Leconte.jpg",
+      "date": "2020-08-22",
+      "budget": "$40"
     }
   ],
   "completedjourneys": [
@@ -106,12 +114,12 @@
       "id": 2
     },
     {
+      "id": 4,
       "destination": "Ann Arbor Michigan",
       "description": "Me and dad went to see a game last year",
-      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674805/Ann%20Arbor.jpg",
-      "date": "2019-11-30",
       "userId": 4,
-      "id": 4
+      "date": "2019-11-30",
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674805/Ann%20Arbor.jpg"
     },
     {
       "id": 6,
@@ -144,6 +152,15 @@
       "date": "2012-05-05",
       "userId": 4,
       "id": 9
+    },
+    {
+      "destination": "Mt. Leconte / Alum Cave Trail",
+      "description": "My brother and I want to hike the 22 mile trail",
+      "userId": 4,
+      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1596674119/Mt.%20Leconte.jpg",
+      "date": "2020-08-22",
+      "budget": "$40",
+      "id": 10
     }
   ],
   "users": [
@@ -210,14 +227,13 @@
       "id": 4
     },
     {
+      "id": 5,
       "title": "Bridge out at Burgess",
-      "text": "Just a heads up the bridge to get down to the base of Burgess is currently damaged and you won't be able to get down there. ",
-      "date": "",
-      "userId": 4,
-      "username": "Jonathan",
       "url": "",
+      "userId": 4,
+      "text": "Just a heads up the bridge to get down to the base of Burgess is currently damaged and you won't be able to get down there. ",
       "timestamp": "8/17/2020",
-      "id": 5
+      "username": "Jonathan"
     }
   ],
   "pictures": [
@@ -241,13 +257,6 @@
       "userId": 7,
       "username": "Aaron",
       "id": 4
-    },
-    {
-      "caption": "My dad and I at Ann Arbor",
-      "url": "https://res.cloudinary.com/jonrrile/image/upload/v1597723020/IMG_5738_yepsma.jpg",
-      "userId": 4,
-      "username": "Jonathan",
-      "id": 5
     }
   ]
 }

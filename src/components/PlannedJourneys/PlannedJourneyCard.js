@@ -18,7 +18,7 @@ const PlannedJourneyCard = props => {
                 <Card.Text>{props.plannedjourney.description}</Card.Text>
                 <Card.Subtitle className="mb-2 text-muted">Planned Dates:</Card.Subtitle>
                 <Card.Text>{props.plannedjourney.date}</Card.Text>
-                <Card.Subtitle className="mb-2 text-muted">Budget:</Card.Subtitle>
+                <Card.Subtitle className="mb-2 text-muted">Budget Needed:</Card.Subtitle>
                 <Card.Text>{props.plannedjourney.budget}</Card.Text>     
                 <Button variant="outline-primary" type="button" onClick={() => props.deleteJourney(props.plannedjourney.id)}>Delete</ Button>
                 <Button variant="outline-primary" type="button" onClick={() => props.history.push(`/plannedjourneys/${props.plannedjourney.id}/edit`)}>Edit</Button>                
