@@ -16,9 +16,7 @@ const WishJourneyCard = props => {
                 <Card.Title>{props.wishjourney.destination}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">Journey Description:</Card.Subtitle>
                 <Card.Text>{props.wishjourney.description}</Card.Text>
-                <Card.Subtitle className="mb-2 text-muted">Planned Dates:</Card.Subtitle>
-                <Card.Text>{props.wishjourney.date}</Card.Text>
-                <Card.Subtitle className="mb-2 text-muted">Budget:</Card.Subtitle>
+                <Card.Subtitle className="mb-2 text-muted">Budget Needed:</Card.Subtitle>
                 <Card.Text>{props.wishjourney.budget}</Card.Text>     
                 <Button variant="outline-primary" type="button" onClick={() => props.deleteJourney(props.wishjourney.id)}>Delete</ Button>
                 <Button variant="outline-primary" type="button" onClick={() => props.history.push(`/wishlist/${props.wishjourney.id}/edit`)}>Edit</Button>                

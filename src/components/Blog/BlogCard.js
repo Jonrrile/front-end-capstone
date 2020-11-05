@@ -5,11 +5,11 @@ import { CardDeck} from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
 import Timestamp from 'react-timestamp';
 
-let username = sessionStorage.getItem("credentials")
-    username = JSON.parse(username);
-    console.log(username.user)
 
 const BlogCard = props => {
+    const currentUser = parseInt(sessionStorage.getItem("activeUser"))
+
+    if (props.blog.userId == currentUser) {
     return (
         <Card >
             <Card.Header><a href={props.blog.url}>{props.blog.title}</a></Card.Header>
@@ -17,7 +17,7 @@ const BlogCard = props => {
                 <blockquote className="blockquote mb-0">
                     <p>{' '} {props.blog.text} {' '}</p>
                     <footer className="blockquote-footer">
-                        Posted by {username.user} on {props.blog.timestamp} 
+                        Posted by {props.blog.username} on {props.blog.timestamp} 
                         
                     </footer>
                     </blockquote>  
@@ -27,5 +27,20 @@ const BlogCard = props => {
                 </Card>
     )
 }
-
+ else {
+    return (
+        <Card >
+            <Card.Header><a href={props.blog.url}>{props.blog.title}</a></Card.Header>
+            <Card.Body>
+                <blockquote className="blockquote mb-0">
+                    <p>{' '} {props.blog.text} {' '}</p>
+                    <footer className="blockquote-footer">
+                        Posted by {props.blog.username} on {props.blog.timestamp} 
+                        
+                    </footer>
+                    </blockquote>            
+                </Card.Body>
+                </Card>
+    )
+ }}
 export default BlogCard

@@ -99,9 +99,13 @@ const ApplicationViews = (props) => {
           
           
         }} />
-         <Route exact path="/blog" render={(props) => {
-      return <BlogList {...props}/>
-    }} />
+        <Route
+        exact path="/blog"
+        render={props => {
+          
+            return <BlogList {...props}
+            />
+        }} />
       <Route path="/blogs/new" render={(props) => {
         return <BlogForm {...props} />
       }} />
@@ -116,7 +120,7 @@ const ApplicationViews = (props) => {
         return <GalleryList {...props} />
 
       }} />
-       <Route path="/pictures/new" render={(props) => {
+       <Route path="/gallery/new" render={(props) => {
         return <GalleryForm {...props} />
       }} />
       

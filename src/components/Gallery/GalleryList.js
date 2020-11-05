@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import GalleryCard from './GalleryCard';
 import GalleryManager from '../../modules/GalleryManager'
-import { Button, Container, CardColumns, CardDeck } from 'react-bootstrap';
+import { Button, Container, CardColumns, CardDeck, Card, CardGroup, Carousel } from 'react-bootstrap';
 import Footer from '../Footer/Footer'
 
 
@@ -26,35 +26,28 @@ const GalleryList = (props) => {
     return (
         <div>
            
-                 
-                    
-                 
-           
-               <CardDeck>
-                {pictures.map(picture => {
-                if (picture.userId === parseInt(sessionStorage.getItem("activeUser"))) {
-                    return (
-                        
+            <Container>
+                <CardColumns>
+                {pictures.map(picture => 
                     <GalleryCard className="cards" key={picture.id} picture={picture}
                         deletePicture={deletePicture}
                         {...props} />
-                        
                         )
                     }
-                })}
-                </CardDeck>
-                <div className="wish_button"> 
+                
+                      </CardColumns>
+                      </Container>
+                      <div className="wish_button"> 
                          <Button variant="outline-primary" type="button"
                     className="btn"
-                    onClick={() => { props.history.push("/pictures/new") }}>
-                   Add to Gallery
+                    onClick={() => { props.history.push("/gallery/new") }}>
+                   Add to Gallery 
                 </ Button> 
+                
                 </div>
                      
-                     
-               
                 <Footer />
-                   </div> 
+                    </div>
     );
 };
 

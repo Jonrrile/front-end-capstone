@@ -1,9 +1,8 @@
 import React, { useState } from "react"
 import UserManager from "./../../modules/UserManager"
 import { Link } from "react-router-dom";
-import {Button, FormGroup, FormControl, Container } from "react-bootstrap";
+import {Button, FormGroup, FormControl, Container, Image } from "react-bootstrap";
 import "./Login.css"
-import MyComponent from "../globe/Globe";
 
 const userName = ""
 const password = ""
@@ -41,12 +40,6 @@ const Login = props => {
 
   }
 
-
-
-
-  /* This is representing our sign in and registration forms. 
-  We can adjust the visualization and functionality as needed */
-
   return (
     
     <div className="Login">
@@ -73,8 +66,11 @@ const Login = props => {
           <Button block bsSize="large" type="submit">Sign in</Button>
           <div className="register">New user? &nbsp;
           <Link to="/register"> Register a new account </Link>
+          <Image
+          src="https://document-export.canva.com/DAEFMQSBPPI/1/thumbnail/0001-9735005906.png"
+          width={315}
+          height={290} />
           <Container>
-          <MyComponent />
           </Container>
           </div>
           </form>

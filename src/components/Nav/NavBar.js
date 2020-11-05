@@ -17,7 +17,7 @@ const NavBar = props => {
   }
   return (
     <Navbar bg="light" expand="lg">
-      <Navbar.Brand href="/home">Wanderlust: A Travel Log</Navbar.Brand>
+      <Navbar.Brand href="/home">Wanderlust</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav justify variant="tabs" activeKey="/home">
